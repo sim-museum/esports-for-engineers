@@ -1,5 +1,5 @@
 # esports-for-engineers
-Classic hardcore simulation games from twenty years ago, now free and easy to install on linux
+Providing scripts to run classic hardcore simulation games from twenty years ago on linux
 
 Long before VR headsets were consumer products, hardcore flight and racing simulation games conjured up intense experience in realistic 3D worlds.  Back then, the spell was cast with realistic physics modeling that fused the driver’s reflexes with a vehicles’ simulated response.  According to one reviewer, winning against human and AI competition in these challenging environments was as hard as learning to play the violin, and just as rewarding.
 
