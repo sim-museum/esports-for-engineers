@@ -1,0 +1,94 @@
+﻿MON Scoring 
+eSports for Engineers 2204LTS
+
+OBJECTIVE #1: LEARN FROM AI FEEDBACK
+OBJECTIVE #2: DEEPEN YOUR KNOWLEDGE WITH BRIDGE VARIANTS, ANALYSIS
+OBJECTIVE #3: USER DEFINED (can be regular or aspirational)
+
+---------------------------------------------------------------
+Note: for all OKR's below, it is recommended to use as many different
+bridge programs as possible, and to manually enter games into qplus
+bridge to produce a complete text record of all games.  Bridge programs
+which generate random deals are: wBridge5, Omar Sharif, Bridge Baron 12.
+These three, and qplus bridge, allow you to provide a deal as input.
+Jack bridge demo and Bridge Baron 29 demo provide a limited number of pre-defined hands and do not provide text output.
+
+OKR #1,1, first key result for objective "learn from AI feedback"
+
+
+Play 4 hands of duplicate bridge, ideally using 4 different bridge
+programs - each has it's unique perspective and teaching approach. If 
+possible, manually enter these games into qplus bridge, which saves
+log files in ese/MON/WP/drive_c/games/qbridge15/DATA/LOG and match files in 
+ese/MON/WP/drive_c/games/qbridge15/DATA/LOCAL-MATCHES 
+
+score=(IMP+18)/20*.25, if score>.4 then set score=.4, if score<0 then
+set score=0 If you viewed all the hidden cards during play, multiply
+score by 0.8
+
+There is no penalty for displaying info (on lower right in
+./wBridge5sh) or using help features (Jack, qplus bridge, Bridge Baron 12 and 29).
+
+In wBridge5, rather than using "Dup", you can play the hand yourself, save to .pbn
+and txt, reload, then have the computer play the hand, then save to pbn
+and txt.  This way you have saved two files documenting your game,
+and two files documenting the computer-only game with the same hand.
+You can use an IMP table to convert the difference between your
+score and the computer-only score to IMP.
+
+---------------------------------------------------------------
+OKR #1,2
+
+Skim all documentation in the MON directory.  Read an introductory
+Bridge book such as Bayone, “A Taste of Bridge”, Master Point Press
+(2017).
+
+score=0.1
+---------------------------------------------------------------
+OKR #1,3
+
+Play 8 hands of duplicate bridge, ideally using several different
+bridge programs.  Pay attention to the bidding conventions used.
+
+Determine score from net IMP as in OKR #1,1
+except with “.25” replaced by ".5" wherever it appears
+in the score formula, i.e. score=(IMP+18)/20*.5, if score>.5 then
+set score=.5, if score<0 then set score=0
+---------------------------------------------------------------
+OKR #1,4
+
+Study bridge bidding, (see the videos and book recommentations in
+the DOC directory).
+
+score: 0.1
+---------------------------------------------------------------
+OKR #2,1
+
+Same as OKR #1,3, except specify in Options/Deal that a random player
+will have >19 points.  Scoring is the same as in OKR #1,3
+---------------------------------------------------------------
+OKR #2,3
+
+Review all play made in a previous OKR with .bcalc.sh.  Create a text 
+file in the afterGameReport directory describing insights 
+gained.  (You could also try using ./tenace.sh, but you'd have
+to manually convert from .pbn to .lin format for input into tenace.)
+
+score: 0.2
+---------------------------------------------------------------
+
+Alternative software
+
+To complete these MON OKRs you can use any of the following
+bridge programs:  wBridge5, Jack, Omar Sharif, Bridge Baron 12 and 29 or Qplus.
+wBridge5, Omar Sharif and Qplus lets you enter your own deals for free.  The
+others provide only some pre-selected deals unless you
+buy a license.  The executables for wBridge5, Jack demo, Qplus demo
+and Bridge Baron 29 demo
+are included.  To use Bridge Baron 12 or Omar Sharif, follow the
+download instuctions provided when you run the
+install script.
+
+It is recommended to try all bridge programs -
+each has its unique strengths.
+

@@ -1,0 +1,18 @@
+#!/bin/bash
+echo "------------------------------------------------------------------------------------"
+echo "eSports for Engineers (ese) command list"
+echo "------------------------------------------------------------------------------------"
+echo "./gpl.sh: run car racing simulator"
+echo "./ma.sh: run simulator of air combat at the dawn of the jet era"
+echo "./ff6.sh: run full-featured air combat and war simulator"
+echo "./bms432.sh: modification of ff6 focused on training and robust multiplayer"
+echo "./ff6_replay.sh: run replay analyzer on saved ff6 flight telemetry data"
+echo "./bms432.sh: same as above, but for bms432"
+echo "./gpl_replay.sh: run car racing replay analyzer"
+echo "./gpl_car_mechanic.sh: tune race car"
+echo "./winecfg_gpl.sh: change wine virtual desktop resolution for car racing simulator"
+echo "./winecfg_ff6.sh: same, but for ff6 flight simulator"
+echo "./winecfg_bms432.sh: same, but for bms432 flight simulator"
+echo "./ff6rampStartTrainer.sh: cockpit orientation and ramp start trainer for ff6 and bms432"
+echo "------------------------------------------------------------------------------------"
+exit 0

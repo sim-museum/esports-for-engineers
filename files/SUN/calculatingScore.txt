@@ -1,0 +1,31 @@
+﻿SUN Scoring 
+eSports for Engineers v. 4.3b
+
+"Republic, the Revolution" is the first ambitious software release from the
+Demis Hassabis, who later achieved fame leading Google Deepmind and
+the Alpha Zero team, and recently made headlines again with successful 
+protein folding software.  "Republic" is experimental, and is not
+as polished as the other games.
+
+Rather than playing this game, you can elect to do another OKR
+from your lowest-scoring day of the week.  For example,
+if Chess is your weakest event this week in terms of score, you
+can choose to do another WED OKR and enter the score here
+rather than playing Republic: The Revolution.
+
+You can choose to 
+
+OBJECTIVE #1: LEARN FROM AI FEEDBACK
+OBJECTIVE #2: USER DEFINED (can be regular or aspirational)
+
+---------------------------------------------------------------
+OKR #1,1
+
+score .1 point for completing the Republic, The Revolution
+tutorial
+
+---------------------------------------------------------------
+OKR #2,1
+
+score .5 points for winning "Republic, The Revolution" in easy mode.
+
