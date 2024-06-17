@@ -1,0 +1,27 @@
+# You can install and run the games on a computer that does not have internet access.  
+# (It is necessary to install many packages from the default Ubuntu repositories before running the games
+# so be prepared to do this from an Ubuntu cdrom, from Ubuntu .deb files, or through some other means)
+
+# If security is a concern, follow these steps:
+
+1. Designate an old PC for use only with eSports for Engineers.  (A gaming PC is overkill for these old game - a 5 year old, min-range PC works fine. An nvidia graphics card is helpful.)  A complete install of all the games takes roughly 400 GB of disk space.
+
+2. Install Ubuntu 22.04 LTS on this PC.  (You could also create a new Ubuntu 22.04 LTS partition in a dual boot configuration, where you boot either Ubuntu or MS Windows, or Ubuntu or a different linux partition.) 
+
+3. follow the steps in introduction.txt (within the tar file and in the scripts directory on the github site), paying particular attention to the instructions about downloading and installing proprietary graphics drivers.  
+
+4. execute "./runThisScriptFirst.sh" (this will print out a sudo command for you to copy/paste into a terminal window) for downloading packages from the internet, unless you point to an ubuntu cdrom in /etc/apt/sources.list):
+
+(also in the githib site scripts directory, and in the tar file) to install the needed packages
+
+5. download flightgear and the add-on aircraft for flightgear as described in introduction.txt. 
+
+6. run ./wine_experimental.sh
+
+7. Copy esports-for-engineers.tar.gz onto your Ubuntu partition.  Unpack and run launcher.py to play
+the games.
+
+At this point you can disconnect from the internet permanently, then install the games[1].  
+
+
+

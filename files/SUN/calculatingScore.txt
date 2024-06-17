@@ -1,0 +1,55 @@
+﻿SUN Scoring 
+eSports for Engineers 22041LTS
+
+Several types of poker are available.
+
+You can choose to 
+
+OBJECTIVE #1: LEARN FROM AI FEEDBACK
+OBJECTIVE #2: USER DEFINED (can be regular or aspirational)
+User-defined OKR could include, e.g. winning a certain amount of money in more than one type of poker game
+
+---------------------------------------------------------------
+OKR #1,1
+
+score .1 point for watching the videos and skimming the texts
+under DOC/references.txt
+
+---------------------------------------------------------------
+OKR #1,2
+
+score .2 point for completing all in-game tutorials in 
+the Battle for the Bracelets game
+
+---------------------------------------------------------------
+OKR #1,3
+
+Range Analysis:
+
+    Input different hand ranges into PokerStove and analyze their
+    equity against each other. This will help you understand the
+    concept of range advantage and how different ranges interact in
+    each variant.  Experiment with different opponent ranges in
+    different poker variants to see how it affects your equity and
+    decision-making.
+
+score: 0.1
+
+---------------------------------------------------------------
+OKR #1,4
+
+Hand History Review:
+
+    Import hand histories from your poker game software into
+    PokerStove to review and analyze your play. Identify spots where
+    you could have made better decisions and learn from them.  Analyze
+    hands where you faced tough decisions or encountered unusual
+    situations. Use PokerStove to understand the equity of your
+    decisions and whether they were profitable in the long run.
+
+score: 0.3
+
+
+ 
+
+

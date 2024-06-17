@@ -1,0 +1,233 @@
+﻿TUE Scoring 
+eSports for Engineers 22041LTS 
+
+Note: save your replay file after each race.  For Grand Prix Legends, these files are stored in
+TUE/WP/drive_c/Sierra/GPL/replay.  Copy your .rpy files, along with
+setup files, screenshot .png files showing your games and analysis, to
+the TUE/afterGameReport directory, calculate your score as described
+below, and then enter your score using launcher.py
+
+Note: these OKRs can be completed with either Grand Prix Legends or rFactor 1.
+
+If you use the open source sim racing software Speed Dreams, you'll have to write your own
+OKR's the tracks are unlike real world tracks (one exception is Forza, which
+is like Monza).  If using the rFactor 1 (rF1) 2019 Formula E cars, write new OKRs
+to account for the difference in speed of these electric cars.
+
+Grand Prix Legends is included, is well-supported by community volunteers, and free.
+rF1 has newer physics and AI, but and you would have to purchase it and
+run it on MS windows.  Which is better?  Which would you rather buy, a well-maintained 
+vintage car with a lot of character, or a bland newer car with better tech?  While
+rF1 has better force feedback, GPL has better artwork, though the rF1 Spa track is
+outstanding.
+
+OBJECTIVE #1: LEARN SIMRACING WELL ENOUGH TO RACE ONLINE
+OBJECTIVE #2: (ASPIRATIONAL) ACHIEVE COMPETITIVE QUALIFYING TIMES ON SET OF TRACKS
+OBJECTIVE #3: USER DEFINED (can be regular or aspirational)
+---------------------------------------------------------------
+OKR #1, 1, first key result for objective "learn simracing well enough to race online"
+
+Run ./replay.sh. Choose File/Add replay lap. In the list look for
+replays with the prefix “LOR_”.  These are benchmark replays made by
+an expert Grand Prix Legends driver with initials LOR.  Choose
+an LOR replay for the Watkins Glenn track and review it.
+
+Now run ./gpl-demo.sh and make sure the 1967 carset is chosen.  Select
+the Watkins Glenn track.  You’ll also want to load a LOR setup file for 
+that track (chose "car setup" at bottom left within GPL).  Read the fs or LOR track guide for
+Watkins Glen, which you will find at:
+../TUE/DOC/trackGuidesAndSetups_LOR/GPL_trackguide_WatkinsGlen_by_LOR.pdf
+
+"GPL rank" for a track is your lap time minus the benchmark lap time for that track.
+(For a set of tracks, the GPL rank is the sum of the GPL ranks for each track in the set).
+In other words, the GPL rank for a set of tracks is your time minus the benchmark time,
+where these times are for a long track composed of all the tracks in the set attached
+together.
+
+The GPL rank ratio is: 
+For one track:
+(your laptime - benchmark laptime)/(benchmark laptime)
+or for a set of tracks
+(sum of your laptimes - sum of benchmark lap times)/(sum of benchmark laptimes)
+
+Calculate your GPL rank ratio for Watkin's Glen.  Look up the benchmark time
+in the tables at the end of this file.  For Watkin's Glen, this benchmark
+time is 1:06.912 (1 minute, 6.912 seconds).
+
+score={1-3*GPL rank ratio)*.1, if score>.35 then score=.35, if score<0 then score=0
+---------------------------------------------------------------
+OKR #1, 2
+Same as OKR #1, 1, except with the Spa 67 track. (Note: if you installed
+using the GPL iso, you have all of the GPL RANK tracks listed at the
+end of this file installed.  Choose any of these, not limiting yourself
+to Watkins Glen and Spa, and use the appropriate fs guide, setup and replay.
+The LOR guide is for the older Spa track, not Spa 67, so use the fs guide for Spa 67).
+
+Note: Your daily total is the sum of your OKR scores (subject to an 
+upper limit of 0.7 unless you have an aspirational OKR score above 0.7).
+
+---------------------------------------------------------------
+OKR #1, 3
+After completing OKR #1, 1 or OKR #1, 2, use GPL Motec or pribluda
+to tailor your tire temperature profile, improve your grip and
+reduce your lap time.  
+
+Pribluda provides the race telemetry text that appears on the 
+GPL 3D view by default.  
+
+To use GPL Motec as well, which is recommended, follow these steps:
+1. use a dual monitor setup.  You need this because the GPL
+Modtec real-time dashboard appears on your second monitor.
+2. (If using rF1, run addTelemetryLoggerToRfactor.sh to install telemetry.)
+Before starting GPL, run twoMonitorTelemetry.sh to start GPL Motec
+3. start GPL, enter the 3D view and wait for the GPL Motec 
+display to appear 3 minutes after you started GPL Motec.
+4. Use <ALT> TAB and <ALT> F6 in Ubuntu to return keyboard
+focus to the GPL window.  (A lot of trouble, but worth it!) 
+
+(Note that GPL Motec only works with the
+66 mod, the 67 mod, and those 67x cars which are also in the 67 mod)
+
+Where DT is your lap time reduction in seconds due to tailoring tire 
+temperature profile,
+
+score={(DT/5)*.2, if score>.2 then score=.2, if score<0 then score=0
+
+---------------------------------------------------------------
+OKR #1, 4
+On a track of your choice, run a complete practice session along
+with the AI cars.  If using Grand Prix Legends, save the
+practice session and exit.  Use ./editRaceLineup.sh to load
+the saved practice session file and reduce
+AI speed (note that this utility works only with the 65 and 67 mod,
+and with those 67x cars which are also in the 67 mod).  Set the race
+to be at least 3 laps in length, and with full damage.
+Run the race and win it (no points if you don't win).
+
+score= .05 if racing against F3 cars, .1 if racing against F2
+cars, and .2 if racing against F1 cars.  
+
+(if using rFactor 1, use the JR AI improvement plugin, adjust AI
+speed with the AI speed slider, and give yourself 
+a score consistent with the Grand Prix Legends scoring.)
+The needed rFactor 1 tracks and plugings can be downloaded here:
+https://www.mediafire.com/file/ra4ltu9w72eo6f8/INSTALL_rFactor.tar.gz/file
+with sha256 checksum 
+2a1053df0a790cb5ad56a8d25236c0e990afff96fa6a2e158c4c33bb77836438 INSTALL_rFactor.tar.gz
+---------------------------------------------------------------
+OKR #1, 5
+The following tasks are worth .05 points each:
+
+Read Ian Korf’s book, “You Suck at Racing: A Crash
+Course for the Novice Driver”, or similar
+
+skim all documentation in the TUE directory
+
+read the documentation in the setupGuides directory,
+develop a new setup, and test it on two tracks 
+
+finish a 67SC sports car race with Pit Stop and
+Keypress selected in GEM with 15 cars or more participating, where you
+beat at least 5 cars with AI speed set to 2 in GEM.
+
+Choose one of the new high-quality tracks (Montjuic Park v2, Thruxton, 
+Goodwood 65, Spa 67, Isle of Man, Beal Valley, Wilmot).  Set
+up a 3 lap race vs. Formula 2 or Formula 3 AI opponents, using
+./editRaceLineup.sh as described in DOC/exampleScoreDescription.txt
+
+Tune setups using the skidfun track.  Note that you can drive
+either direction on this track, or drive in figure 8's, or
+drive in any other way so long as you stay between the outer
+circle of cones and the inner circle of cones.
+
+Practice trail braking on the Zandvoort and Wilmot tracks. Examine
+how expert GPL drivers use trail braking by reviewing the 
+replay files
+Wilmot Fer_65 38_31_T.rpy
+Wilmot Lot_65 38_60_T.rpy
+LOR_Zand12573.rpy
+in GPL replay analyzer.
+If you don't have enough oversteer to trail brake, stiffen the
+rear roll bar by 20% while loosening the front by 20%.
+
+finish 10 iGor races.  In GEM simply click on “iGor” to
+see available races.  If there are none available, start one of your
+own, selecting a car and track you haven’t used before, or haven’t
+used often.
+
+finish in the top 25% of an online "iGor" race with at least 10
+drivers participating.  To join such a race, select iGor from the GEM
+screen.  (Although some races are open to anyone, you may need to join 
+a GPL league to participate in the race).
+
+---------------------------------------------------------------
+OKR #2, 1
+In Grand Prix Legends run qualifying laps on all Challange Rank
+tracks or Historical Rank tracks with the '67 mod or '67x mod,
+or all GPL55 tracks using the 55 mod.  (Benchmark times for
+all these tracks are listed at the end of this file).  
+If you get a negative GPL rank overall, give yourself a score of 
+1 good for the next month - you earned it!
+
+(If using rFactor 1, the track set is all 
+the tracks added on by rFactor.sh.  Use the JR AI improvement plug 
+in.  Run races with the 67 cars on Watkin's Glen, Monaco, Brands Hatch,
+Bremergarten, Spa, Goodwood and Zandervoot. Use the 67 benchmark times
+for these tracks listed below.  In addition, run races with the 58
+cars on Monaco, Zandervoot and Spa.  For these races, use the
+55 benchmark times below.  Compute your GPL rank and
+ratio using all 10 of these races, including both the 67 and
+the 58 races.)
+
+If your GPL rank is positive, your score is 
+score=0.7/(GPL ratio), with maximum score of .7
+
+GPL rank benchmark times are as follows (vis. https://gplrank.schuerkamp.de/php-pub/user.php?showRanks)
+
+GPLRank Watkins Glen Int. 1967          1:06.912
+        Silverstone Circuit 1967        1:30.907
+        Monaco 1967                     1:29.326
+        Zandvoort 1967                  1:26.848
+        Monza 1967                      1:30.202
+        Rouen-les-Essarts 1967          1:59.277
+        Mexico 1967                     1:50.478
+        Spa Francorchamps 1967          3:20.342
+        Kyalami 1967                    1:20.861
+        Mosport Park 1967               1:23.134
+        Nürburgring 1967                8:21.931
+
+ChallengeRank
+        Brands Hatch                    1:36.128
+        Solitude-Ring                   3:29.506
+        Le Mans Bugatti 1967            1:39.456
+        Anderstorp 1973                 1:37.881
+        Goodwood                        1:17.703
+        Bremgarten 1954                 2:07.270
+        Snetterton Heath Circuit 1967   1:26.594
+        Riverside 1960                  1:50.660
+        Road 67 1967                    4:34.188
+        St Jovite - Mont Tremblant      1:41.134
+        Bathurst, Mount Panorama        2:02.046
+        Österreichring (Zeltweg) 1970   1:47.078
+
+HistoricRank
+        Imola                           1:33.569
+        Road Atlanta                    1:16.370
+        Crystal Palace                  0:51.472
+        Keimola 1970                    1:16.728
+        Le Mans Sarthe 1967             3:20.666
+        East London 1967                1:24.528
+        Reims 1967                      1:59.702
+        Adelaide 1967                   1:33.290
+        Aintree 1955                    1:47.028
+        Lime Rock Park 2002             0:54.716
+        Pau 1967                        1:25.618
+
+GPL55Rank
+        Monaco 1967                     1:41.000
+        Zandvoort 1967                  1:40.000
+        Aintree 1955                    2:00.400
+        Monza 10k                       2:46.500
+        Spa 1967                        4:18.100
+        Buenos Aires 1955               1:43.100
+

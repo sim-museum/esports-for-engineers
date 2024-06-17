@@ -1,0 +1,101 @@
+﻿MON Scoring 
+eSports for Engineers 22041LTS
+
+OBJECTIVE #1: LEARN FROM AI FEEDBACK
+OBJECTIVE #2: DEEPEN YOUR KNOWLEDGE WITH BRIDGE VARIANTS, ANALYSIS
+OBJECTIVE #3: USER DEFINED (can be regular or aspirational)
+
+---------------------------------------------------------------
+OKR #1,1, first key result for objective "learn from AI feedback"
+
+Run ./wBridge4.sh Set level to 5.
+
+Play 4 hands of duplicate bridge.  (Don't select "Dup" to start play
+in the closed room until the Dummmy hand has been laid out ; this will
+cause the 4 AI players to start play using the same bid).
+
+Play these 4 hands in a single wBridge5 session; your total
+International Match Points (IMP) score for the 4 hands will be
+displayed at lower left.
+
+score=(IMP+18)/20*.25, if score>.4 then set score=.4, if score<0 then
+set score=0 If you viewed all the hidden cards during play, multiply
+score by 0.8
+
+There is no penalty for displaying info (on lower right in
+./wBridge5sh).
+
+Rather than using "Dup", you can play the hand yourself, save to .pbn
+and txt, reload, then have the computer play the hand, then save to pbn
+and txt.  This way you have saved two files documenting your game,
+and two files documenting the computer-only game with the same hand.
+You can use an IMP table to convert the difference between your
+score and the computer-only score to IMP.
+
+---------------------------------------------------------------
+OKR #1,2
+
+Skim all documentation in the MON directory.  Read an introductory
+Bridge book such as Bayone, “A Taste of Bridge”, Master Point Press
+(2017).
+
+score=0.1
+---------------------------------------------------------------
+OKR #1,3
+
+Play 8 hands of duplicate bridge, this time allowing for a different
+bid in the closed room by selecting “Dup” before the bidding phase.
+Now you are being scored on the bidding as well as the card play.
+For the last 4 hands, specify in Options/Deal that a random player
+will have >19 points.  Viewing hidden cards is not permitted at the
+silver level.  Adjusting your partner’s bidding
+in Options/Bidding is allowed.  Setting the bidding convention
+to Standard American Yellow Card (SAYC) is recommended for beginners.
+  Determine score from net IMP as in OKR #1,1
+except with “.25” replaced by ".5" wherever it appears
+in the score formula, i.e. score=(IMP+18)/20*.5, if score>.5 then
+set score=.5, if score<0 then set score=0
+---------------------------------------------------------------
+OKR #1,4
+
+Study bridge bidding, (see the videos and book recommentations in
+the DOC directory).
+
+score: 0.1
+---------------------------------------------------------------
+OKR #2,1
+
+Same as OKR #1,3, except specify in Options/Deal that a random player
+will have >19 points.  Scoring is the same as in OKR #1,3
+---------------------------------------------------------------
+OKR #2,2
+
+Same as OKR #1,3, except select "Goulash" in Options/Deal. In goulash
+bridge, the deck is cut between hands but not thoroughly shuffled, 
+making long suits more common and thus changing optimum strategy. 
+Scoring is the same as in OKR #1,3
+---------------------------------------------------------------
+OKR #2,3
+
+Review all play made in a previous OKR with .bcalc.sh.  Create a text 
+file in the afterGameReport directory describing insights 
+gained.  (You could also try using ./tenace.sh, but you'd have
+to manually convert from .pbn to .lin format for input into tenace.)
+
+score: 0.2
+---------------------------------------------------------------
+
+Alternative software
+
+To complete these MON OKRs you can use any of the following
+bridge programs:  wBridge5, Jack, Bridge Baron or Qplus.
+Only wBridge5 lets you enter your own deals for free.  The
+others provide only some pre-selected deals unless you
+buy a license.  The executables for wBridge5 and Jack
+are included.  To use Bridge Baron or Qplus, you need
+to download a free executable from the web link given
+when you run ./bridgeBaron.sh or ./qplus.sh
+
+It is recommended to try all four bridge programs -
+each has its unique strengths.
+

@@ -1,0 +1,28 @@
+Tips for using ./launcher.py to install and run the games
+
+1. Use wine 6 (installed via ./wine_default.sh) to install and run games if possible.  Only use wine 7 (installed via ./wine_experimental.sh) if prompted to do so.  Wine 7 is needed for installation of Qplus Bridge, Omar Sharif Bridge, memoryTraining, Battle of Britain, FS9, and BMS435.  Switch back to wine 6 after installing these games.  This is a recommendation, not a requirement.  Wine 6 appears to provide more stability than Wine 7, but most games will run fine with Wine 7.
+
+2. The install scripts will tell you which version of Microsoft Windows to emulate for each game.  Pay close attention to this!  If you specify the wrong version of MS Windows, the game will probably not work.
+
+3. If a game requires HTML support, wine 7 should prompt you to install wine gecko.  Install it.  If not prompted to install wine gecko, you can download and install it manually: https://askubuntu.com/questions/1236811/how-to-install-html-gecko-support-in-wine#1236824
+
+4. If a game doesn't install correctly, restart the install via:
+a. cd to game directory
+# delete the wineprefix directory, WP, which is where executables
+# and their dependences are stored
+b. rm -rf WP
+c. mkdir WP
+d. remove any files added to the INSTALL directory during the installation
+process.  You can find a list of such files in ese/QA/installFilesToRemove.txt
+
+5. You can save time during the installation process by placing all downloaded files in ese/tar.  During installation any relevant files in that directory will be automatically moved to the game's INSTALL directory.  Otherwise, you have to manually place each downloaded file into the correct install directory.
+
+6. After installation is complete, you can reduce the size of the ese directory by removing install files that are no longer needed:
+1. copy ese/QA/removeInstallFiles.sh to the ese directory and run it.  
+2. unmount any isoMnt files used to install .iso images.  
+This will reduce ese directory size by roughly 40%.
+
+7. Make sure enough disk space is available before installing eSports for Engineers.  A full install of eSports for Engineers, installing all 40 games, takes up about 250 GB of disk space.  Removing unneeded install files after installation is complete reduces ese directory size to 155 GB, or 77 GB if rFactor and BMS4.35 is not installed.  (Installing BMS4.35 with all add-on content requires 102.4 GB of disk space, reduced to 76.2 GB after install files are removed).  The corresponding disk sizes for rFactor are 44 GB and 16.9 GB.
+
+8. Last but not least - each sim has different strengths.  Use ./launcher.py to switch quickly between sims, using each for what it does best.  Use THU/SDOE to practice stalling behavior, THU/Battle of Britain for a multi-layered systems simulation of a famous historical air war, flightgear and FS9 for two different instrument navigation and landing experiences.  Don't get focused on any one sim - it's not the tool that matters, it's the experience being simulated.  If it's not clear how to perform an action in one particular sim, switch to one of the alternative sims for insights and revisit the first sim later.  Several sims are better than one - you never really understand something until you understand it in more than one way.
+

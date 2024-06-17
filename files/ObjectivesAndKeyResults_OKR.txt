@@ -1,0 +1,76 @@
+                   Google’s OKR Playbook
+
+No one has more collective experience in implementing OKRs than Google. As
+the company has scaled (and scaled), it has periodically issued OKR guidelines
+and templates. The following excerpts are drawn mostly from internal sources
+and reprinted with Google’s permission. (Note: This is Google’s approach to
+OKRs. Your approach may—and should—differ.)
+                                       —
+At Google, we like to think big. We use a process called objectives and key
+results (OKRs) to help us communicate, measure, and achieve those lofty goals.
+
+Our actions determine Google’s future. As we’ve seen repeatedly—in Search,
+in Chrome, in Android—a team composed of a few percent of the company’s
+workforce, acting in concert toward an ambitious common goal, can change an
+entire mature industry in less than two years. Thus it is crucial that as Google
+employees and managers we make conscious, careful, and informed choices
+about how we allocate our time and energy—as individuals and as members of
+teams. OKRs are the manifestation of those careful choices, and the means by
+which we coordinate the actions of individuals to achieve great collective goals.
+    We use OKRs to plan what people are going to produce, track their progress
+vs. plan, and coordinate priorities and milestones between people and teams. We
+also use OKRs to help people stay focused on the most important goals, and help
+them avoid being distracted by urgent but less important goals.
+    OKRs are big, not incremental—we don’t expect to hit all of them. (If we do,
+we’re not setting them aggressively enough.) We grade them with a color scale
+to measure how well we did:
+    0.0–0.3 is red
+    0.4–0.6 is yellow
+    0.7–1.0 is green
+
+Poorly done/managed OKRs are a waste of time, an empty management gesture.
+Well done OKRs are a motivational management tool that helps make it clear to
+teams what’s important, what to optimize, and what tradeoffs to make during
+their day-to-day work.
+   Writing good OKRs isn’t easy, but it’s not impossible, either. Pay attention to
+the following simple rules:
+
+     Objectives are the “Whats.” They:
+      express goals and intents;
+      are aggressive yet realistic;
+      must be tangible, objective, and unambiguous; should be obvious to a
+      rational observer whether an objective has been achieved.
+      The successful achievement of an objective must provide clear value
+      for Google.
+
+     Key Results are the “Hows.” They:
+      express measurable milestones which, if achieved, will advance
+      objective(s) in a useful manner to their constituents;
+      must describe outcomes, not activities. If your KRs include words like
+      “consult,” “help,” “analyze,” or “participate,” they describe activities.
+      Instead, describe the end-user impact of these activities: “publish
+      average and tail latency measurements from six Colossus cells by
+      March 7,” rather than “assess Colossus latency”;
+      must include evidence of completion. This evidence must be available,
+      credible, and easily discoverable. Examples of evidence include change
+      lists, links to docs, notes, and published metrics reports.
+
+
+                Committed vs. Aspirational OKRs
+
+OKRs have two variants, and it is important to differentiate between them:
+   Commitments are OKRs that we agree will be achieved, and we will be
+willing to adjust schedules and resources to ensure that they are delivered.
+      The expected score for a committed OKR is 1.0; a score of less than 1.0
+      requires explanation for the miss, as it shows errors in planning and/or
+      execution.
+   By contrast, aspirational OKRs express how we’d like the world to look, even
+though we have no clear idea how to get there and/or the resources necessary to
+deliver the OKR.
+      Aspirational OKRs have an expected average score of 0.7, with high
+      variance.
+
+Excerpt from Doerr, "Measure What Matters", Penguin (2017), p. 255.
+
+For more about OKR's: https://www.whatmatters.com/faqs/okr-meaning-definition-example/
+

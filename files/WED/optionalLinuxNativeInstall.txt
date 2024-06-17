@@ -1,0 +1,51 @@
+For sharper graphics, speed and configurability you might
+want to install the linux native versions of scid
+and nibbler
+To install in Ubuntu 20.04 LTS:
+
+sudo apt install -y libopenblas-dev scid stockfish phalanx
+
+now run ./nibbler.sh
+
+this is now running the linux binary, which has better graphics quality
+you must specify the linux engine binary for nibbler.  Select Engine/Choose engine
+and navigate to WED/INSTALL/lc0_cpu
+
+Optional: For graphics acceleration of the Leela Chess Zero engine in Ubuntu 20.04 LTS, install needed machine learning graphics library via
+sudo apt install -y nvidia-opencl-dev
+Then, in nibbler, select Engine/Choose engine
+and navigate to WED/INSTALL/lc0_linux_graphicsAcceleration/lc0_opencl
+
+Note:  Generally the larger the weight file, the stronger the play.  To make lc0 a better chess player, choose a larger weight file in Nibbler.  There are several weight files to choose from in the directory (path)/WED/INSTALL/otherWeights
+
+Now run ./scid.sh
+In tools/Analysis engine #1 type "lc0_cpu", click on "..." and
+navigate to (path)/WED/INSTALL/lc0_cpu
+Also install the stockfish engine.  In tools/Analysis engine #2
+type "stockfish" for engine name and command.
+Also load the database of master chess games
+Choose File/Open and navigate to WED/INSTALL/25000grandMasterGames.si4
+
+
+the linux version of Nibbler saves its configuration information in:
+$HOME/.config/Nibbler
+The path to leela chess zero is in this file:
+$HOME/.config/Nibbler/config.json
+
+the linux version of SCID saves its configuration in the directory
+$HOME/.scid4.7
+
+Optional: BanksiaGui is an alternative to nibbler which graphically displays move values on the board like Sabaki and q5go (see FRI).  To configure and run BanksiaGui, type
+./BanksiaGui.sh
+The follow these steps to configure (also see the BanksiaGui screenshots in installTips.pdf):
+1. From the menu select File/Settings/Engines
+2. Click "+" to add a new engine and navigate to the engine file, e.g. lc0_cpu
+3. Click "OK" and then click on the engine name to see engine options
+4. Scroll down to the last option in the list, "WeightsFile".  
+5. The value for WeightsFile is set to "<autodiscover>", which may automatically find a weights file in the same directory as the engine you specified.  In case that doesn't work, double click on "<autodiscover>" and replace it with the full path and file name for your weights file.  Alternatively, edit the WeightsFile field directly in $HOME/.config/BanksiaGUI/banksiaengines.json
+6. To display engine stats during games, select the engine options "LogLiveStats", "UCI_ShowWDL" and "VerboseMoveStats"
+
+To reset configuration, delete the configuration directories via:
+rm -rf $HOME/.config/Nibbler
+rm -rf $HOME/.scid4.7
+rm -rf $HOME/.config/BanksiaGui

@@ -1,0 +1,66 @@
+Check that the correction version of wine is installed via the command
+
+wine --version
+
+if the result is not "wine-6.0" issue the command
+
+sudo apt install -y wine-development
+
+If wine is installed, no further installation is needed to run:
+goreviewparter.sh  (play against Leela Zero)
+
+If using Ubuntu 22.04LTS, KaTrain.sh (play against KataGo) will also work.
+The above programs are MS Windows binaries that run under wine.
+
+sabaki and g5go are provided as linux binaries  which require the linux binary version
+of KataGo.  
+
+To configure linux KataGo:
+cd INSTALL/katago/CPU-slow
+./katago_CPU_EIGEN_2204LTS genconfig
+# it is recommended to specify an additional limit to make KataGo move much faster: 10 seconds
+# otherwise defaults
+# note 6block.bin.gz is copied to default_model.bin.gz, which is used here
+# a different weight file could be used in the genconfig
+# command with the optional -model flag, see documentation
+
+Now returning to the FRI directory and configuring sakaki:
+Run ./sabaki.sh
+Choose Engine/Show Engine Sidebar
+Then on the left click on the down arrow and select Manage Engines
+click Add
+specifiy the name katago
+click on the folder icon and navigate to the katago binary in FRI/INSTALL/katago
+for arguments specify
+gtp -config gtp.cfg
+# katago command is <path>/katago_CPU_EIGEN_2204LTS gtp -config 'gtp.cfg'
+
+Optional: also add the gnugo engine
+In the manage engines dialog (see above)
+click Add
+specify the name gnugo
+for path specify /usr/games/gnugo
+for arguments specify
+--mode gtp
+
+The KataGo configuration directory is:
+$HOME/.katago
+The Sabaki configuration directory is:
+$HOME/.config/Sabaki
+
+To reset configuration, delete these directories
+
+In sabaki and other Go programs, it is recommended that beginners start with
+the small 9x9 board size.
+
+To use the latest version of KaTrain, issue these Ubuntu 20.04 linux commands:
+
+sudo apt install python3-pip
+pip3 install -U katrain
+
+This will automatically calibrate KataGo for your computer hardware
+Note: you'll need to add katrain to the path.  The scripts cygdb, cython and cythonize are installed 
+in '$HOME/.local/bin' which is not on PATH.
+sudo cp $HOME/.local/bin/katrain /usr/games
+export PATH=$HOME/.local/bin:$PATH
+

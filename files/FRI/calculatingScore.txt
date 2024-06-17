@@ -1,0 +1,86 @@
+﻿FRI Scoring 
+eSports for Engineers 22041LTS 
+
+In order to enter your score you'll need to save your .sfg file. If playing
+against KaTrain, saved game files are in
+FRI/WP/drive_c/KaTrain/sgfout.  Screenshot .png files showing
+./goreviewpartner.sh ./sabaki.sh or ./q5go.sh analysis are also
+useful, along with .rsfg.csv files produced by ./goreviewpartners.sh.
+Copy the relevant files to the FRI/afterGameReport directory before
+entering your score in launcher.py.
+
+If your computer does not have a GPU, as is common with
+laptops, be sure to use a cpu-only version of the weiqi
+engine, e.g. katagoCpuOnly.
+
+OBJECTIVE #1: LEARN FROM WEIQI BOOKS AND TUTORIAL
+OBJECTIVE #2: LEARN FROM AI FEEDBACK
+OBJECTIVE #3: (ASPIRATIONAL) DEMONSTRATE WEIQI PROFICIENCY
+OBJECTIVE #4: USER DEFINED (can be regular or aspirational)
+
+---------------------------------------------------------------
+OKR #1,1
+
+Add .05 to your daily score for each of the following tasks you complete:
+
+viewing the q5go “Learn Go” tutorial and using the “Open
+in Editor…” function to play from the more difficult tutorial
+positions against a q5go engine.
+
+reading Janice Kim’s “Learn to Play Go, A Master’s Guide
+to the Ultimate Game”, (Good Move Press, 2004) and working through the
+examples with KataGo
+
+reading Cho Chikun’s “Go, A Complete Introduction to the
+Game”, (Kiseido Publishing, 1997) and working through the examples
+with KaTrain
+
+analyzing your games with ./goreviewpartner.sh and
+printing out a pdf of each analyzed game. By keeping a
+record this way, you can keep track of your improvement.  Include
+./goreviewpartner.sh .rsfg files in FRI/afterGameReport.
+
+---------------------------------------------------------------
+OKR #2,1
+
+Run ./KaTrain.sh.  If you are a beginner, use a small board size such
+as 9x9 and a weakened version of KataGo, such as Blinded Policy.
+Choose Teaching Game.  Remember to save your game and copy the .sfg
+file from FRI/WP/drive_c/KaTrain/sgfout to FRI/afterGameReport.
+
+Let u be the number of times KaTrain teaching game undid your move and
+s be the number of points on the side of the Go board (s=7 for a 7x7
+board).
+
+score = {1 – u/(s*2)}*.25, with score capped at 0.25, if score <0 then
+score =0
+
+---------------------------------------------------------------
+OKR #2,2
+
+In Sabaki, turn on Engine/analysis before your first move.  Let the
+highest value that appears at any point on the board be m.  If using a
+9x9 board, no handicap stones and 0 komi, that value is roughly 96%.
+If using a 19x19 board with no handicap stones and 6.5 komi, the
+maximum is about 51%.  Your score is zero unless you win, so use as
+small a board, and as many handicap stones as you need to win.  Engine
+analysis (heat map) must be turned off during the game.  After you’ve
+won a game, use that initial highest value to determine your score per
+this formula.
+
+score = (1-(m-50)/50)*.4, if score>.4 then score=.4, if score<0 then
+score=0
+
+If you are using the default 6block network, multiply your score by
+0.8 (There is no penalty if using the larger 15block.bin.gz network
+with KataGo)
+
+---------------------------------------------------------------
+OKR #3,1
+
+score = (1-(m-50)/50)*.7, if score > .7, score =.7.  if score<0 
+then score=0.  Same as OKR #2, 2, but use
+the 19x19 board with 6.5 komi and give KataGo a time limit of not less
+than 1 minute per move.  Also let KataGo calculate during your
+turn.  Use as many handicap stones as needed to win.
+

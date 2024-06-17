@@ -1,0 +1,7 @@
+Source code links:
+Rowan's Battle of Britain (flight sim): https://github.com/gondur/BOB_Src
+Rowan's Mig Alley (flight sim): https://github.com/gondur/mig_src
+Free Falcon (flight sim): https://github.com/FreeFalcon/freefalcon-central
+flightgear (flight sim): https://www.flightgear.org/download/source-code/
+speed dreams (sim racing): https://sourceforge.net/projects/speed-dreams/files/
+pokerTH (poker game): https://github.com/pokerth/pokerth

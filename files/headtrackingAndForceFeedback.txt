@@ -1,0 +1,91 @@
+Hardware devices for force feedback (FF) and head tracking make the sims more challenging,
+realistic and immersive.  Getting these devices working on linux can be difficult, but
+there are exceptions.  The Microsoft Sidewinder FF joystick and Logitech FF wheels work
+out of the box; no configuration is needed.
+
+The Microsoft Sidewinder force feedback joystick works with several sims in this package; no
+configuration is needed.  It works well with THU/Training/FS9.  It provides
+force feedback for other sims as well, including THU/Training/SDOE, THU/MigAlley, 
+THU/BattleOfBritain, TUE/rFactor and TUE/NR2003.
+
+FF wheels from vendors other than Logitech may be supported in Ubuntu 22.04LTS, or
+they may not.  A driver for the Thrustmaster TX wheel is in TUE/INSTALL/tmdrv-master.  
+(This driver does not provide FF).  For more information about linux FF wheel support,
+see, e.g., 
+
+ https://linuxreviews.org/Linux_Steering_Wheel_Manager_Oversteer_v0.6.0_Brings_support_For_6_Additional_Wheels
+
+The opentrack software provides headtracking for linux, when used with a webcam
+and LED lights that attach to a headset.  A popular webcam/LED device is
+delanclip:
+https://delanengineering.com/
+To configure delanclip to work with THU/Training/flightgear, type in a terminal: 
+
+#install needed packages
+time sudo apt install -y git cmake git qttools5-dev qtbase5-private-dev libprocps-dev libopencv-dev g++ subversion wine-development vim okular flightgear libeigen3-dev gcc-multilib g++-multilib wine32-development wine32-development-preloader wine32-development-tools cmake-curses-gui plocate
+
+#build opentrack from source
+mkdir delanclip
+# opentrack URL: https://github.com/opentrack/opentrack/releases/tag/opentrack-2022.1.1
+cp TUE/INSTALL/opentrack-opentrack-2022.1.1.zip delanclip
+unzip opentrack-opentrack-2022.1.1.zip
+cd delanclip/opentrack-opentrack-2022.1.1
+mkdir build
+cd build
+cmake ..
+
+# run the text menu configuration program ccmake
+# set the eigen3 path to /usr/include/eigen3
+# set windows sdk to ON
+# choose continue
+# choose generate
+ccmake .
+
+# now compile and build
+make
+make install
+
+cd install/bin
+
+./opentrack
+
+# in the opentrack gui, click the tool icon in the input section, then choose
+# Camera/Camera Settngs/Device to be your PS3 webcam, not an internal webcam
+# if using headtracking with flightgear, choose "Flightgear" under Output
+# if using another sim which runs under wine,  chose "Wine" under Output
+# then select the tool icon to the right and enter the path to the sims'
+# wine prefix
+# select "Start" and verify that the webcam is tracking the LED's
+# and that raw tracker data and game data numbers change as the
+# LED fixture is moved around.
+
+# copy the delanclip profile to the opentrack config directory
+cp ~/esports-for-engineers/TUE/INSTALL/delanclip/DELANCLiP-Opentrack-Basic.ini ~/.config/opentrack-2.3
+
+#if you use 
+# sudo ./opentrack
+# to avoid setting permissions
+# the config directory will be /root/.config/opentrack-2.3
+
+# if running delanclip with a sim that uses wine, call wine as follows
+# WINEESYNC=1 wine <sim>
+
+#if running delanclip with the flightgear sim, type these commands:
+
+#download the flightgear Headtracker add-on
+sudo apt install -y subversion
+svn checkout https://svn.code.sf.net/p/flightgear/fgaddon/trunk/Addons/Headtracker
+#or copy this directory from TUE/INSTALL/delanclip
+
+# run flightgear
+fgfs --addon=/home/main/Headtracker --generic=socket,in,25,127.0.0.1,5542,udp,opentrack
+
+
+
+
+
+
+
+
+
+

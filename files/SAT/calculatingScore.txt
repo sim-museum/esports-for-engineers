@@ -1,0 +1,177 @@
+﻿SAT Scoring
+eSports for Engineers 22041LTS 
+
+As with the other games, be sure to record your flights and copy the
+resulting .vhs files to the SAT/afterGamereport directory.  If using
+free falcon, press the "F" key to toggle the recording on and off.  Use the
+./getBriefingDebriefing.sh command to copy Briefing.txt and
+debrief.txt into the SAT directory.  Copy these files also into
+SAT/afterGameReport, along with any relevant screenshots from Tacview
+and notes.  If using one of the more advanced Benchmark Sims (BMS)
+versions of Falcon 4 (see below), you can also put screenshots from
+Weapon Delivery Planner (WDP) in the SAT/afterGamereport directory.
+
+With more than 25 years of development so far, the Falcon 4.0 series is one 
+of the longest running game series using the same code base in PC history.
+Several versions can be used with esports for engineers.  In order of
+release date, these are:
+
+1. 2005: Falcon 4 Allied Force (simplest in scope, well documented, free dowload.)
+
+2. 2010: Free Falcon (free and open source, included with esports for engineers.)
+
+3. other, more recent versions are also available on the internet
+
+Install scripts for the first 2 versions are included with this package.
+Each version has its own strengths and drawbacks, and some may not install on 
+your computer.
+
+You can complete the SAT tasks with Falcon Allied Force (the simplest),
+with Free Falcon (which is included in this package) or with one of the 
+more recent versions.
+
+OBJECTIVE #1: UNDERSTAND COURSE MATERIAL FROM REAL-LIFE PILOT TRAINING
+OBJECTIVE #2: LEARN COMBAT FLIGHT SIM FREE FLIGHT, BOMBING AND DOGFIGHT
+OBJECTIVE #3: (ASPIRATIONAL) WIN DYNAMIC CAMPAIGNS
+OBJECTIVE #4: USER DEFINED (can be regular or aspirational)
+
+---------------------------------------------------------------
+OKR #1, 1
+
+add .2 points to your score for skimming all 500 pages of the Falcon AF
+manual at 
+
+SAT/DOC/Falcon 4 Allied Force/F4AFManual.pdf
+
+(The more recent versions of Falcon 4 are similar but more complicated; 
+each later version comes with much longer manuals so the Falcon 4 Allied
+Force manual is a great place to start.)
+
+---------------------------------------------------------------
+OKR #1, 2
+
+Add .025 point to your daily score for each of the following tasks that
+you complete; the upper limit is 0.7 as usual.
+
+learning how to take off, land and use the weapons
+systems in the flightgear f16.  To fly this aircraft run the script
+./training_F16.sh
+
+learning to take off, land and use the cockpit instruments
+of the MiG21.  To fly this aircraft, run the script:
+./training_MiG21.sh
+
+trying out and understanding all the FF6 keyboard
+commands in Falcon4KeyboardCommands.pdf
+
+skimming all documentation
+
+taking off, flying a traffic pattern and landing the F16 in
+Falcon 4 using only the trim controls, not the main elevator
+and aileron controls.
+
+watching BMS 4.32 – Install to Combat Ready in 1 Hour on
+Youtube at URL https://www.youtube.com/watch?v=uU3pmXvnc0k To save
+time and protect hearing turn off sound and use close caption text at
+2x speed.  (Note that BMS 4.32 is a more advanced version of the FF6
+software – see below).
+
+for becoming more familiar with FF6 keyboard commands by doing
+ramp start entirely using the Function key commands listed in
+INSTALL/US Page 1 FF5.pdf
+
+for getting two AIM-120 missiles in the air at the same time, with different
+targets, in TWS mode, where both missiles hit their targets.  (Refer
+to the Falcon AF manual or SAT/DOC/Falcon BMS Acronym Companion.pdf
+to look up acronyms).
+
+for hitting a target with a AIM-120 using TWS, where you don't
+turn on STT until just before pitbull to give the target minimum
+time to react to the RWR warning.  Put two vhs record files in the
+afterGameReport, one showing a normal missile launch and
+the other this minimum warning launch.  
+
+
+---------------------------------------------------------------
+OKR #2, 1
+
+Add .05 point to your daily score for each of the following tasks that
+you complete; the upper limit is 0.7 as usual.
+
+a. ILS instrument landing
+
+b. guns-only dogfight win
+
+c. IR missile dogfight win
+
+d. radar missile dogfight win
+
+e. CCIP bombing, for this and other air-to-ground weapons, you get
+no points unless at least some of the intended targets were destroyed.
+You can put .vhs recordings or debrief text demonstrating that targets
+were destroyed in the afterGameReport directory.
+
+f. CCRP bombing
+
+g. maverick
+
+h. HARM
+
+i. laser guided bombing
+
+j.use IFF, available in Free Falcon and BMS 4.35 (see pdf in SAT/DOC for instructions)
+
+k. instant action mission in the last week where you accomplish at
+least 7 of the 9 tasks above take off, fly a traffic pattern and land
+using only trim controls, (that is to say without using joystick
+inputs or otherwise moving the elevator, aileron or rudder)
+
+l. successful missile evasion tactial engagement
+
+---------------------------------------------------------------
+OKR #2, 2
+
+add .2 to your score for flying 5 different airplanes in successful campaign
+missions.  (Falcon Allied Force has only one flyable aircraft,
+the F16, so it cannot be used here.)
+
+---------------------------------------------------------------
+OKR #3, 1
+
+The realistic campaigns are:
+
+In Falcon Allied Force: Balkans theater
+
+In Free Falcon: the three Israeli theater campaigns (Six Day War –
+1967, Yom Kippur – 1973, Shlom Hagalil – 1982) and Balkans.  Note
+that in the case of the 1967 and 1982 warns you need to load
+one of the saved campaign rather than starting a new one due
+to a bug which causes a new campaign to crash.
+
+In addition to Israel and Balkans, the more advanced BMS versions 
+of Falcon 4 provide these additional realistic campaigns: 
+Kuwait, Vietnam and Somalia.  See SAT/AdvancedFalcon4.pdf for details.
+
+Score is based on your mission rating as shown in the logbook.
+
+score = rating on mission flown/5, averaged over the last 5 missions
+flown, with score capped at 0.7
+
+---------------------------------------------------------------
+OKR #3, 1
+
+score =1 for winning any of the campaigns listed above (playing either side),
+
+---------------------------------------------------------------
+
+Non-free Alternatives
+
+More advanced and complex versions of the Falcon 4 code are available, and
+can be run on Ubuntu 20.04 LTS.  
+
+It's up to you which of the version to use for the OKRs, free falcon,
+which is included, Falcon Allied Force, for which an install script
+is provided, or one of the more recent versions.  Each version
+has unique strengths and weaknesses in the form of documentation, ease of
+installation or use, and suitability to a particular OKR.
+

@@ -1,0 +1,145 @@
+﻿THU Scoring
+eSports for Engineers 22041LTS 
+
+Note: To avoid graphics glitches with the THU sims, pay careful
+attention to graphics settings.  Use a dual monitor setup if possible, 
+with each monitor set to maximum resolution.  Run
+./setWineDisplayResolutoin.sh and set the Windows version to Windows XP.
+In Battle of Britain PC Config,
+set both 3D Resolution and Campaign Resolution to 1024x768 or 1280x1024.  When
+viewing a recon photo, toggle the keyboard "1" key to rotate the view
+and press the "0" key to return to the campaign screen.  Run
+wine_experimental.sh before installing THU/battleOfBritain.sh.  
+(Battle of Britain) is the only game in the default esports for 
+engineers package that will not install or run with wine_default.sh
+Mig Alley can be run with a single monitor using a workaround -
+see FAQ.txt in the main esports-for-engineers directory.
+If you follow all of these instructions and use Ubuntu 20.04 LTS
+linux, you should be able to run Battle of Britain and
+Mig Alley campaigns without graphics problems.
+
+If you follow all these guidelines, you should be able to
+experience these classic sims with good quality graphics. To
+appreciate the innovative viewing system of these Rowan sims, try flying in 
+padlocked target to player view (CTRL F6 in Mig Alley, CTRL F6 or CTRL i 
+in Battle of Britain), or try Battle of Britain's roving cam view (ALT v).
+
+In order to enter your score for the THU flight sims, you must record
+your flights.
+
+To do this in Mig Alley, set PREFERENCES/View/Gun Camera to "ON" prior
+to the flight, then after exiting the 3D view select replay, type a
+name for the replay file, and type "Save".  A red indicator light at
+the center of the cockpit is lit when the flight is being recorded.
+Pressing the "V" key in the 3D view toggles the gun camera (and the
+red light) on and off.  Toggle recording off for the uneventful parts
+of the flight.
+
+All video segments from a single flight are stored in a single .cam
+file.
+
+Note that when viewing a replay you may use a number key to select a
+replay control if the mouse isn't working for this purpose.  The
+number "1" activates the first control on the left, "2" the second
+from left, and so forth.
+
+The flight recording process is similar in Battle of Britain.  Prior
+to flight set the Gun Camera to "ON" in SIM CONFIG/View.  The "C" key
+toggles recording on and off.
+
+After you've completed a task, copy the recording to the
+THU/afterGameReport directory.  You can find the .cam replay file in
+stored in THU/MigAlley/WP/drive_c/rowan/mig/Videos or
+THU/BattleOfBritain/WP/drive_c/Program Files (x86)/Rowan
+Software/Battle Of Britain/VIDEOS.  You can also add other supporting
+documents, such as game screenshot png files and your own comments in
+a text file, to the afterGameReport directory.  These sims are
+sufficiently complicated that each session is a new adventure.
+Share the story of your latest adventure in a text file in the
+afterGameReport directory!
+
+OBJECTIVE #1: LEARN COMBAT FLIGHT SIM FREE FLIGHT AND DOGFIGHT
+OBJECTIVE #2: (ASPIRATIONAL) WIN DYNAMIC CAMPAIGNS 
+OBJECTIVE #3: USER DEFINED (can be regular or aspirational)
+
+
+---------------------------------------------------------------
+OKR #1, 1
+
+For each of the following tasks you complete, add 0.05 to your
+daily score:
+
+taking off, flying a pattern and landing using only the
+trim controls, never the main elevator/aileron/rudder controls, for
+the Battle of Britain ME 109, the Battle of Britain Spitfire and the
+Mig Alley Mig 15.  This is useful because mastering the trim controls
+is very important for success in all the eSports for Engineers flight
+sims.
+
+reading all the documentation in the THU directory and
+reviewing the replay files, (as a workaround use the number keys
+rather than clicking on the review film icons per the documentation,
+e.g. press “4” to play a replay and 0 to exit.)  Padlock and then
+use the F1 and F6 to view the relative position of the planes during replay.
+
+reading chapters 1 and 2 of Shaw’s “Fighter Combat:
+Tactics and Maneuvering”, Naval Institute Press, 1985.
+
+skimming the rest of Shaw’s book “Fighter Combat”
+
+flying all the missions in the Quick Mission directory,
+flying the MiG 15 (and adjusting the manual gunsight) whenever
+possible, and also flying all 4 of the UN flyable aircraft
+
+---------------------------------------------------------------
+OKR #1, 1
+
+For this OKR, which is a dogfight, you can fly either a Korean
+War Jet in Mig Alley or a WWII aircraft in Battle of Britain.
+
+If you choose the jet dogfight, run ./migAlley.sh and choose Single
+Player/Quick Mission/One on One.  Set flight to Red.  You will be
+flying the MiG 15 against a F86 Saber.  For the MiG, gunsight should be
+set to manual for best realism; use the “T” and “Y” keys to set the
+aiming circle diameter to the apparent wingspan. All settings in
+Preferences, for example autopilot skill, realism etc. should be set
+to the maximum value.
+
+If you choose WWII planes, run ./battleOfBritain.sh, set Sim
+Config/Flight Options to Maximum.  As always, all configuration
+setting should be set for maximum realism.  Choose Quick
+Shots/Dogfighting/One on One.  You will be flying a Spitfire against a
+ME 109 E4.
+
+Where r is the skill level of the the highest level AI pilot you
+defeated in a dogfight (hero=5, ace=4, veteran=3, regular=2, poor=1,
+novice=0)
+
+score= {1-(5-r)/5}*.25, maximum score .25
+
+---------------------------------------------------------------
+OKR #1, 2
+
+Same as OKR #1, 1 except you select a many vs. many dogfight scenario.
+Be sure to read the documentation about the challenging many vs.
+many scenario before attempting this.
+
+Where k is the number of planes you shoot down,
+
+score= {1-(3-k)/3}*.35, maximum score .35
+---------------------------------------------------------------
+OKR #2, 1
+
+Your score is .5 if you win any of the 4 RAF mini-campaigns or any of
+the 4 Luftwaffe min-campaigns, otherwise 0.  This is self-graded - you
+decide whether you won or not, but explain your decision in a text
+file placed in THU/afterGameReport along with supporting game output
+files and screenshots.
+
+OKR #2, 2
+
+score=1 if you win the entire Battle of Britain (playing either the Great Britain
+or the German side), or if you win the Mig Alley Spring Offensive, 0 otherwise.  
+A score of 1 is valid for one month.  Save files supporting any claims to victory 
+to THU/afterGameReport as with the previous OKR's.
+

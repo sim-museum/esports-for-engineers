@@ -1,0 +1,92 @@
+Welcome to the virtual museum of classic sims.
+
+What qualifies a game to be included in this collection?  It must meet several criteria:
+1. award winning games, high quality AI sparring partners, accurate physics, in two cases world champion
+2. free, and, in many cases, open source
+3. allows the player to remain anonymous, unusual in an era where game companies often monitor customer activity over the internet.  After installation, the game must be able to run offline without any further internet access.
+4. simulates something which takes place in the physical world, not something which exists only in a computer fantasy world
+5. quantitative and mathematical, in several cases featuring engineering simulations of real-world vehicles
+6. runs on linux, with all games and install scripts included in a single download
+7. you have a choice of two or more sims for each game.  If one sim doesn't work on your PC, or has some other limitation, you can always use another.
+
+The good news is that these games are a great workout for your mind and an endlessly fascinating challenge, all free of charge!
+
+The bad news is that:
+
+1. even with the carefully written installers, getting these games up and running on your PC or laptop is non-trivial.  Although many
+games will install easily, getting them all working flawlessly on your PC likely requires linux command-line expertise.
+
+2. One reason these games are free is that they proved to be way too hard for a regular audience.  In many case the game designers were rediculously ambitious.  To be honest, the eSports for Engineers collection will give you nothing but frustration unless you make a learning plan and study hard.  But wouldn't you like to achieve mastery of motorsports, or classic strategy games such as chess and weiqi? 
+
+So how to learn these complex sims?  We're learning all the time - reading the news, researching for work - but we'll need to up our game in order to tackle this project. 
+
+Science tells us how to set goals and learn effectively[1,2,3].  Basically, there are two broad categories of techniques that work on even the most difficult material:
+
+1. Focus and engagement.  Really roll up your sleeves, immerse yourself in the material, continually test your understanding like a student doing homework problems and checking the answers.
+
+2. Association and structuring.  After the hyperfocus of step 1, zoom out and look at the big picture.  Structure what you've learned, organize it, label it, search engine optimize it in your mind so you can recall it later.  
+
+Fleshing this out in more detail:
+
+1. FOCUS 
+
+   QUANTITY
+   a. evoke deep processing: think of your own examples
+   b. adjust the difficulty (not too hard, not too easy) to maximize engagement
+   c. test yourself frequently, as forcing yourself to recall information strengthens your memory of that information
+   d. set up a feedback loop, constantly comparing your result against a benchmark.  This is called "deliberate practice."
+
+   QUALITY
+   a. switch topics frequently, like a student taking classes in different subjects concurrently.  This is called "interleaving".
+   b. you don't really understand something until you understand it in more than one way.  To take a simple example, remember a mathematical
+expression as an equation (symbolic) and also as a graph (visual)
+   c. evoke emotion: negative emotion in particular narrows attention, focuses you on details
+
+2. STEP BACK AND CONSIDER THE BIG PICTURE 
+
+   STRUCTURE
+   a. Breaking a long list into groups of 3 or 4 items makes it easier to remember and understand the items.  (That's why this list of 16 learning techniques is subdivided into several groups.)  This is called "chunking".
+   b. build on prior associations: the more scaffolding you have, the more places you have to attach new scaffolding.  Research shows us that the mind doesn't "fill up".  Quite the opposite - the more you know, the easier it is to learn.
+   c. present foundational material first.  Create a backbone on which to add.  Thus I first introduced 2 broad categories, then I added subcategories underneath.
+
+   EXAMPLES AND PRINCIPLES
+   a. use examples that make a connection with prior knowledge
+   b. principles, not rote: pay attention to deep characteristics, not surface characteristics
+
+   CUES
+   a. story telling. A story has a plot, connecting pieces of information together into an easily-remembered chain of cause and effect.
+   b. spaced practice.  You'll remember information much better if you learn a little every day than if you cram all at once.
+   c. Apply something you learned in one domain to another, very different, domain.  This is called "far transfer".
+   d. avoiding interference: find ways to remember new things in a way that doesn't overlap with previous knowledge
+
+With that in mind, let's introduce the sims in the collection.  If you tackle a different set of games each day of the week as described below, you'll benefit from both chunking and interleaving.
+
+On Monday, play wBridge5, a computer world champion in the game of Contract Bridge.  wBridge5 plays your partner and the opposing pair.  Employ deliberate practice by setting the software for Duplicate Bridge, which will score your result by comparision to a result from 4 AI players.  Another bridge sim, bcalc, is also included in the esports for engineers package.
+
+Sim racing on Tuesday will engage you with high speed problem-solving and realistic physics, all in immersive historical race settings.  All your control inputs on a given lap distills down into a single number, your lap time, which you compare vs. benchmark for deliberate practice. The most difficult racecars to drive in history were either the 1950's F1 cars or the 1967 F1 cars - both are included here.
+
+Improve your chess on Wednesday with help from two world computer champion sparring partners, stockfish and an open source clone of the new deep learning chess sensation, Alpha Zero.  Adjusting the difficulty level is easy with Alpha Zero, which plays with a creative and surprisingly human style.
+
+Write your own adventure story on Thursday, when a sim drops you into an air war which simulates a real-life historical conflict.  You play two roles, pilot and General.  As with the racing sim on Tuesday, simulation physics compares favorably with commercial simulators.  While the real-life counterparts of the racecars simulated on Tuesday may have been the most difficult cars to drive ever[4], the aircraft simulated on Thursday were some of the most difficult planes in history to fly.  On top of that challenge, you can also choose to create your own missions.  What you do in each role effects the course of the war, so each war story you experience virtually will be unique.  Scripts make it easy to post your story of what happened each day, along with replay files, to the esports for engineers forum at fosstodon.org.  The fighter aircraft simulated, the 1941 planes lacking in engine power and firepower, and the powerful but hard-to-control 1950's jets, are some of the most challenging ever in which to fly and fight.
+
+The deep learning Alpha Zero clone returns on Friday, this time playing weiqi, the classic Chinese strategy game known in English as "Go".  This remarkable game was invented in the paleolithic era, i.e. the stone age, but was not mastered by computers until Alpha Go beat the world champion in 2016.  The excellent Alpha Zero Weiqi tutor shows graphically and in detail how each move you make impacts your chance of winning.
+
+The Saturday flight/war sim builds on what you learned on Thursday, adding the additional complexity of more modern electronic battlefields.  Again, historically accurate conflicts are simulated, this time with much more complex avionics and thousands of air, land and see vehicles which the player can control if desired.  This enormously complex sim is the result of 25 years of work by developers working on a single code base, likely the longest-lived code base in the history of gaming.  Four different versions of the sim are provided, each with different strengths and emphasis.  Deliberate practice is aided by a professional quality freemium flight review utility, which plots the trajectories of all air, land and sea units and munitions in 3D.  Many aircraft are flyable, but the featured aircraft, the F16, is challenging to fly because is used in many roles, including fighter and bomber; the pilot must learn to perform in all these different roles.
+
+The Sunday games include early work of Demis Hassabis, the computer scientist who led the Alpha Zero team.  Here he simulates grass roots political organizing.  Persuading or coercing individual citizens one at a time, and later larger groups, the player attempts to build a revolutionary movement that will take control of a post-Soviet Eastern European city.  Although the Sunday political simulation games don't match the esports for engineers selection criteria exactly, they are highly ambitious simulations that illuminate an important part of life and create a new genre of sim.
+
+So there you have it, seven artificial intelligence sparring partners to stretch your mind with a different challenge each day of the week.
+
+To proceed of the project of learning these complex sims:
+
+1. Install files needed by the sims.  Run "./runThisScriptFirst.sh", which performs a couple checks and then prints out a sudo command.  Copy and paste this sudo command into a terminal window.
+
+2. Read the game tips and workarounds in "workaroundsAndTipsForEachGame.txt"
+
+3. To play the games, execute "launcher.py"
+
+[1]see ./metaLearning.txt
+[2]see ./ObjectivesAndKeyResults_OKR.txt
+[3]see ./fourElementsOfMentalFunctioning.txt
+[4]"Engineers, not racers, are the true drivers of success in motor sport", Economist, Oct. 17, 2020 edition.
+

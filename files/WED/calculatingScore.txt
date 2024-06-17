@@ -1,0 +1,145 @@
+WED Scoring 
+eSports for Engineers 22041LTS
+
+Save your Chess games as .pgn files.  Copy these .pgn files, along
+with screenshot .png files showing your games and analysis to the
+WED/afterGameReport directory, calculate your score as described
+below, and then enter your score using launcher.py
+
+OBJECTIVE #1: LEARN FROM CHESS BOOKS
+OBJECTIVE #2: LEARN FROM AI FEEDBACK
+OBJECTIVE #3: DEMONSTRATE CHESS PROFICIENCY
+OBJECTIVE #4: USER DEFINED (can be regular or aspirational)
+
+---------------------------------------------------------------
+OKR #1,1
+
+0.05 points each for the following tasks:
+
+learn all the features of SCID and nibbler
+
+read (or skim, for introductory chapters) Lev
+Alburt’s Comprehensive Chess Course Vol. 1 and II.  (1988)
+
+read Yasser Seirawan’s “Winning Chess Strategies”
+(2005)
+
+read Sunil Weeramantry’s “Best Lessons of a Chess
+Coach”, McKay (1993)
+
+read Matthew Sadler’s book “Game Changer” about Alpha
+Chess Zero (2019)
+
+
+---------------------------------------------------------------
+OKR #2,1, first key result for objective "learn from AI feedback"
+
+Put leela chess zero on its weakest settings by using a
+Versus/Temperature of 1 and a Versus/TempDecayMoves of 20 in
+Nibbler, and also by selecting in Nibbler Engine/Select Weights File …
+one of the smallest weight files in WED/INSTALL/otherWeights.  The
+smallest weight files are tinygyal-8.pb.gz, meangirl-7.pb and
+evilgyal-6.pb.gz.  With these settings leela chess zero
+has an ELO rating in the ballpark of 1200-1400.
+
+In SCID you may also load the INSTALL/200401smallChessDotCom.si4
+master games database, open the SCID Windows/Tree Window and pick
+opening moves based on moves played from that position in the master
+database as you play.  (Pick a move randomly from the top 6 moves listed
+in the tree window, rolling a dice to choose from the list).  This leads
+you to try many different openings, never playing the same opening
+twice.  Until you reach a novel position, the SCID database guides you
+through the opening.
+
+Rather than using dice, which tends to favor uncommon moves in the
+scid tree window, you can use ./grandmasterOpeningMove.sh,
+which takes into account how frequently each move appears in the
+database.  This script will print out documentation if run from
+the command line without parameters.
+
+After finishing the nibbler chess game, save the game as a .pgn file.
+
+Next, you will annotate your game.  The delta between an analysis
+engine’s best move and your move is a useful metric of human player
+performance.  To calculate this for chess, play a game against nibbler
+and save the resulting pgn file.  
+
+Now load this into scid, with stockfish set as analysis engine #1. 
+(Select Tools/Analysis Engine
+then New.., then type "stockfish" in the "Name" and "Command" text
+entry boxes, then select "OK".  Select Tools/Start Engine 1 and 
+then, at the bottom of the "Analysis:stockfish" tab, select the
+pen and paper icon.  The hover help text for this icon is "Annotate..."
+
+If you haven't already, select the first move in the notation window, 
+then open the engine #1 analysis window and select the annotate icon.  
+(Note that you can make a similar analysis of a
+Weiqi game using ./gorevewpartner.sh in place of ./scid.sh, see FRI).
+
+Annotate the game as follows.
+
+1. Run ./scid.sh, load your .pgn game (or copy and paste it from
+nibbler to scid using the clipboard).
+
+2. In scid, load the stockfish analysis engine.
+
+3. In the notation window, right click and remove all variations and
+comments.  Note that if you wrote a custom OKR which allows you to
+take back moves, you'll need to first promote the variation which led 
+to the actual final position.
+
+4. In the analysis window, choose "annotate" (the notepad icon) and
+set the blunder threshold to 2.  Annotate your game.
+
+5. In scid save your annotated .pgn file (the easiest way to do this
+is to copy to the clipboard, then past into a text editor.)
+
+6. Copy the annotated .pgn file to WED/
+
+7. Examine the annotations created by the stockfish engine.  Count the
+number of times stockfish proposed an alternate to one of your moves.
+This is the number of blunders you committed.  Where this number of
+blunders is b, your score is
+
+score= (1-b/5)*.3, if score>.3 then score=.3, if score<0 then score=0.
+
+Note that you are being measured not be whether you won or lost, but
+by how many blunders you made.  Even if you made a lot of blunders and
+got a low score, your nibbler deep learning opponent may have made
+more (or bigger!) blunders and lost the game.
+
+---------------------------------------------------------------
+OKR #2,2
+
+Follow the nibbler and scid steps for OKR #1, 1 above, but in
+step (4) above set a less forgiving blunder threshold of 1 in the
+annotate window.
+
+After stockfish has analyzed your entire game, count the number of
+variations it has added in the notation window.  This is the number of
+moves for which stockfish thinks a blunder cost you at least a pawn.
+
+Examine each blunder as reported by stockfish.  For example if you are
+playing white and stockfish evaluates the position after your move as
+worth, say, -2.05, i.e. black is ahead by the equivalent of two pawns
+of material.  If instead you had played stockfish’s preferred move,
+white would be ahead by, for example, more than a pawn.  Thus the
+delta is, e.g.,  -2.05-1.25=-3.30.  For each of your moves where the delta was
+less than or equal to -5, a major blunder, add 5 to b.  Thus if you
+made only one blunder, but the blunder was to drop your queen with a
+delta was -9, then for that game b=6.
+
+score is {1-b/10}*.4, with maximum score capped at .4, is score<0,
+then set score=0
+
+---------------------------------------------------------------
+OKR #3,1
+
+score = 0.7*(1-Temperature), where Temperature is the lowest Nibbler
+temperature at which you’ve beaten Leela Chess Zero in the last 30
+days with the 591226.pb.gz weight file and where the first time
+control was at least 30 minutes for each player. Use a version of
+the leela chess zero which runs with graphics card acceleration if 
+possible.
+
+

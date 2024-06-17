@@ -1,0 +1,13 @@
+By default, a Windows version of bcalc will be run under wine.  This allows for
+maximum compatibility with different linux distributions.  For better speed and
+graphics, enable the linux binary version of bcalc.  If you install the 
+libraries with the command below on Ubuntu 20.04 LTS, ./bcalc.sh will 
+automatically switch to the linux version.
+
+Ubuntu 20.04 LTS versions of libraries needed for linux native bcalcgui:
+
+sudo apt install -y liblua5.2-dev libqt5widgets5 
+
+now run ./bcalc.sh
+The graphics are now sharper because you're running a native linux 
+binary.

@@ -1,0 +1,16 @@
+Notes on running these games in MS Windows:
+
+In windows, under Properties, choose compatibility and set the windows
+version as set in the esports for engineers script for the game.  In
+most cases, the game runs with wine set to Windows XP.
+
+Most of the games will run on Windows 10 with compatibity set this way, including qplus bridge and other bridge programs, GPL, rFactor, NASCAR Racing 2003, Chessmaster, MS Flight Simulator, Free Falcon and falcon bms 4.35.
+
+Mig Alley runs on Windows 10 also, under XP compatibility if you follow these steps:
+1. unzip MigAlley/INSTALL/DDrawCompat-v0.5.1
+2. copy the unzipped file, ddraw.dll to the rowan/mig directory
+
+Rowan's Battle of Britain runs on Windows 7, but apparently not on Windows 10
+
+Of course every game that runs in XP compatibility mode will run well on MS Windows XP.
+

@@ -1,0 +1,274 @@
+TROUBLESHOOTING FAQ
+
+Q: Why do several scripts print out sudo commands but not execute them?
+
+A: sudo commands change your overall system configuration.  By
+instructing you to copy/paste sudo commands manually one by one, 
+rather than executing them automatically, the script lets you 
+decide whether to execute each command.
+
+Q: My USB joystick is plugged in, but the sim doesn't recognize
+it.  What to do?
+
+A: Unplug the joystick, then plug it back in.  If that doesn't 
+work exit the sim and restart.
+
+Q: When I try to install THU/battleOfBritain.sh and SAT/BMS4.35/BMS4.35.sh 
+I get an error message that my version of wine is too old.  How
+to fix this?
+
+A: Run ./wine_experimental.sh
+
+Q: After I run ./wine_experimental.sh, every time I install
+I get a dialog box asking whether I want to install wine-mono.
+How should I respond?
+
+A: Never install wine-mono.
+
+Q: During install I get an Ubuntu dialog box giving me options
+of wait or force quit.  What to do?
+
+A: Wait 30 seconds.  If the dialog box does not disappear by
+itself, type <ALT> TAB to see if there is a sim dialog 
+displaying on another window.  You may need to change window
+focus and hit the ENTER key to select a button on that sim
+dialog box.
+
+Q: When I run ./wine_experimental.sh and then install
+./battleOfBritain.sh, I get a dialog asking whether to
+install wine-gecko.  Should I?
+
+A: Yes.  Online help in ./battleOfBrittain.sh requires 
+wine-gecko.
+
+Q: While I was adjusting resolution parameters the display
+and keyboard locked up.  What to do?
+
+A: Assuming you're using Ubuntu 22.04 LTS as recommended -
+type <CTRL><ALT>F3.  This switches to the text-only console.
+Log in, then type
+
+ps -a | grep exe$
+
+you should see some windows .exe files running, each with a 
+4 digit process id (PID).  Kill these processes via the
+command
+
+sudo kill -9 <PID2> <PID2> <PID3> ...
+
+now type <CTRL><ALT>F1 to get to the graphics login screen.
+Log in, and return to your desktop session.
+
+Q: Installing a sim takes a long time.  Is there a way to
+speed it up?
+
+A: No, but multitasking is easy when you only have to 
+click on an install dialog box every once in a while
+to keep the install process going.
+
+Q: When I load an iso with sudo mount, a disk icon 
+appears on the left in the file view, and stays there
+until I eventually turn my computer off.  What to do?
+
+A: After the installation is done, unmount the iso
+by clicking on the chevron to the right of the disk icon.
+
+Q: What else can I do if I still get graphics glitches?
+
+A: Try reducing graphics settings.  Switching to the newer version 
+of wine via:
+./wine_experimental.sh
+might help.
+
+Q: Can I use a game pad to control the sims?  
+
+A: Yes.  The most difficult sim to control is TUE/gpl.sh.  
+The video at the link below shows a player achieving negative
+GPL Rank at Watkin's Glen using a gamepad and also using
+the default setup, including a full tank of gas(!)  Search for
+Gamepad in the GPL replay folder to see a replay.  
+
+http://srmz.net/index.php?showtopic=14236&hl=
+
+https://www.youtube.com/watch?v=HARgwns0ZwU
+
+Throttle and brake right stick, steering left stick, shifting with the triggers, clutch with L1.
+https://www.youtube....h?v=HARgwns0ZwU
+
+Note:
+try gamepad
+just because this is possible doesn't mean it's easy.
+
+Q: Why are fantasy sims not included?  
+
+A: Fantasy sims are just too different from realistic simulation games to fit in with
+the esports-for-engineers collection.  Some of the most creative and/or influencial free
+fantasy sims are:
+adventure
+http://www.ifarchive.org/if-archive/games/zcode/adv551.z8
+Dark Mod
+https://www.thedarkmod.com/main/
+tremulous/unvanquished
+https://unvanquished.net/
+globulation
+https://globulation2.org/wiki/Main_Page
+counterstrike
+https://counter-strike.en.uptodown.com/windows
+
+Q: Why are dual screens recommended for the THU games (Mig Alley, Battle of Britain)?
+
+A: If not running a campaign, just turn on virtual desktop via ./setWineDisplayResolution.sh
+to run the THU games with a single monitor.  
+
+With Mig Alley, it is possible to run campaign on 
+a single monitor, so long as you untic all ./setWineDisplayResolution.sh graphics boxes
+and, whenever you switch from 3D to 2D campaign view, take the following steps:
+1. click on "Size" at upper right in the 2D campaign view
+2. click and drag the canvas border to "wake up" icons
+3. select remove icons at upper right
+4. select restore icons
+5. now you can click on one 2D icon before you need to repeat steps 2-4.
+
+So far, now method has been found to restore single monitor 2D icons during battle of Britain campaign.
+For 3D view, untic all ./setWineDisplayResolution.sh graphics boxes, for 2D view,
+select decorate in the graphics window.  But how to switch graphics settings while the game is
+running?  The source code for these games is available - see the esports for engineers
+github issues tab.
+
+Q: What graphics settings are needed for rFactor 1 on linux?
+
+A: leave the resolution field blank, choose high quality DX9, select run in window,
+be sure to run
+winetricks dxvk
+
+Q: How can I participate in free online GPL races?
+
+A: You can race GPL online at any time using iGor.  For more information, see
+this link:
+http://srmz.net/index.php?s=2aa92fed72beda887b6d390e38f1eeed&showtopic=14225
+
+Q: Will these sims work on a 5 year old laptop with Intel internal graphics (no
+graphics card)?
+
+A: Yes.  If you don't have a graphics card, use the CPU versions of the WED and
+FRI machine learning engines.  Use WED/INSTALL/lc0_cpu and FRI/INSTALL/katagoCpuOnly. 
+All the 3D sims should run fine on a 5 old laptop without a dedicated graphics card.
+
+Q: How do I install the latest linux version of the FRI weiqi software katrain?
+
+A: pip install katrain
+To run it, simply type
+katrain
+From the pulldown menu at upper left, select General and Engine settings to
+download networks and versions of the katago engine.
+
+Q: GPL crashes occasionally in online races.
+
+A: This can happen if the polygons that make up a track are not
+perfectly continuous.  To prevent this problem, select
+77K Track Gap Freeze Fix v.09 in the GEM options window on 
+the lower right of the GEM+ screen.
+
+Q: Why is a dual monitor setup recommended for the THU games?
+
+A: When running campaign in either Mig Alley or Battle of Britain,
+the player alternates between the 2D strategy screen and the 3D
+flight simulator view.  The trick to smooth gameplay is to 
+find graphics settings that work for both the 2D and the 3D view.
+One setting that works is all tick boxes off in ./setWineDisplayResolution.sh
+Graphics tab turned off except the control windows tick box, then
+run 
+./delayedMonitorReset.sh 0
+to set both monitors to max resolution, then start the game.  If
+an occluding black box appears in 3D view, try changing the primary
+display in the Ubuntu Settings/Displays screen.  Keep trying different
+settings until the 3D black box disappears, or use the workarounds 
+described in the THU documentation.  Yes, these classic games are worth 
+the trouble.
+
+Q: My old laptop doesn't have a dedicated graphics card.  Will all the games
+still work?  
+
+A: The FRI game engine katago is configured to run on a graphics card GPU,
+so you'll need to use the FRI/INSTALL/katago/katagoCpuOnly binary rather
+than the FRI/INSTALL/katago/katago binary.  Generate a new gtp.cfg file
+using katagoCpuOnly via 
+katagoCpuOnly genconfig -model default_model.bin.gz -config gtp_no_gpu.cfg
+
+An alternative is to simply use the older gnugo engine rather than katago,
+but gnugo does not provide the heatmap analysis and strong play katago
+provides.
+
+Generally, the games in the tar file work well with old graphics hardware.
+The only game that may not work is the most advanced version of the BMS
+add-on for the SAT game.  The included SAT game, freeFalcon.sh, should
+work fine.
+
+Q: I want to use a different linux distro rather than Ubuntu 22.04 LTS.  Will the
+games still work?
+
+A: These games were all installed and configured for Ubuntu 22.04 LTS.
+For best results, create a 350 GB or larger 22.04 LTS partition just for these games, it
+only takes 30 minutes or so, improves security, and will save you the time
+you'd otherwise spend fiddling with settings.
+
+That said, most games will work on other Ubuntu versions, but expect to do some
+troubleshooting.  You may not be able
+to avoid the THU black box issue (see above) if not using Ubuntu 22.04 LTS.
+One issue is that the FRI katago binary may crash, e.g. because it's missing
+a library.  If libzip.so.5 is missing, for example,
+A work around is to symlink the existing libzip.so.4
+to the needed library via, e.g.,
+
+sudo apt install -y libzip-dev
+sudo apt install -y libzip4
+# install mlocate and use it to find the .so library file
+sudo apt install mlocate
+sudo updatedb
+locate libzip
+sudo ln -s /usr/lib/x86_64-linux-gnu/libzip.so.4 /usr/lib/x86_64-linux-gnu/libzip.so.5
+
+
+Q:  Which version of wine should I use for each game?
+
+A:  The only games that don't work with wine_default are
+battleOfBritain.sh in THU and the optional SAT game 
+./BMS435.sh, this later game requiring an optional download.
+The stable wine_default.sh is recommended for all the other
+games.  Caveat: You might want to use ./wine_experimental.sh
+for MON/wBridge5.sh, which allows you to use online help and 
+save games without setting the ./setWineDsplayResolution.sh
+to Windows XP.
+
+Q:  wine_experimental.sh uses a saved version of wine 7.7 (Staging).  Would
+the latest version of winehq-staging work better?
+
+A: It's impossible to say for sure, as the wine version winehq-staging
+points to changes every couple of weeks.  So far, up to wine 6.11 (Staging)
+there seems to be no benefit to using a wine version more recent
+than ./wine_experimental.sh
+
+A possible exception is the SUN game, which may have fewer graphics
+artifacts with a more recent version of winehq-staging, but that's
+not entirely clear.
+
+Q: My laptop has 1366x768 resolution.  Can I still play the games?
+
+A: Yes, although you won't be able to use the dual monitor workaround
+for the THU games.  If you find that part of the game screen is
+getting cut off, set resolution to 800x600, which works well for 
+these old games.
+
+Q: FRI/KaTrain.sh runs on a graphics card, but my laptop doesn't have one.
+Is there some way I can still use KaTrain?
+
+A: Yes!  Upgrade to the newest native linux version of katrain via:
+pip3 install katrain
+
+The katrain executable will not be in your path by default.  Add it via, e.g.,
+export PATH=$HOME/.local/bin:$PATH
+
+Once in katrain, left click on the bars icon at upper left and select
+General & Engine Settings.  Choose FRI/INSTALL/katago/katagoCpuOnly
+as your engine, or download one of the engines recommended by katrain.  
+Similarly for the model file. 

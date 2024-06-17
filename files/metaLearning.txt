@@ -1,0 +1,258 @@
+Seven principles fall under the maxim “Think it through.”
+
+Evoking deep processing. The more cognitive operations one performs while
+    paying attention to such operations, the more likely it is that one will
+    later recall that information (Craig et al., 2006; Craik & Lockhart, 1972).
+    This is the most obvious implication of the maxim “Think it through.”
+    For example, if you formulate an example of how every one of these
+    principles can be used in a specific situation, you will remember them
+    much better than if you simply read and understand them.
+
+Using desirable difficulty. We can think of this as the Goldilocks rule (not
+     too hot, not too cold—just right!). Learning is best when the task is
+     not so easy as to be boring but not so hard as to be over the learner’s
+     head (Bjork, 1988, 1999; VanLehn et al., 2007). To get the most out of
+     thinking it through, the person needs to be as engaged as possible—no
+     more, no less. For example, if you are good at math, you will need more
+     challenging examples of new mathematical concepts to stay engaged
+     than would someone who has less knowledge.
+
+Eliciting the generation effect. Simply recalling information—especially when
+     effort is required—strengthens memory for that piece of informa-
+     tion; the mere act of digging information out of memory reconstructs
+     and strengthens the mental representation of the information. For
+     example, a consequence of this principle is that frequent testing can
+     enhance learning if it leads learners to recall relevant information (But-
+     ler & Roediger, 2007; Roediger & Karpicke, 2006).
+
+Engaging in deliberate practice. In some cases, to learn effectively you need
+     to pay attention to and think through specific aspects of what you are
+     learning. In particular, feedback helps you to correct aspects of a men-
+     tal representation when it isn’t optimal (Brown, Roediger, & McDan-
+     iel, 2014; Ericsson, Krampe, & Tesch-Romer, 1993). For example, when
+     learning French, it’s good to have a native speaker listen to you and
+     carefully correct your pronunciation. Such feedback is most effective
+     when learners use “deliberate practice.” Deliberate practice occurs
+     when you pay careful attention to mistakes and use the ways that an
+     error differs from the correct performance to correct subsequent perfor-
+     mance. (This principle alone, however, is not enough to make you into
+     an expert; Hambrick et al., 2014.)
+
+These first four principles all focus strongly on the fact that more pro-
+cessing of the relevant information will produce better memory. The next
+three principles focus on ways to induce people to engage in additional
+processing. (My interrupting here and pointing this out should allow you
+to create two large groups for this set of principles, the first four and the
+second three, which respects the fact that we can store easily no more than
+four units in a “chunk,” as discussed below.)
+
+Using interleaving. Instead of just focusing on one type of problem (e.g.,
+    when doing math), it’s best to intermix different types of problems.
+    The same principle implies (but to my knowledge has not yet been
+    investigated) that when learning French, it’s best to do a bit of studying
+    French, then some history, then some math, and then back to French.
+    This makes sense because it’s easier to pay attention to something new
+    than to sustain paying attention to the same material, extended over
+    time. For example, all else being equal, you would probably learn the
+    material in this chapter more effectively if you did something else after
+    you finish this section, and returned to the second set of principles later.
+
+Inducing dual coding. If I give you a short paragraph to remember, you will
+    recall it better if I also include some relevant illustrations. In general,
+    presenting both verbal and visual material enhances memory. In this
+    case, the brain stores multiple representations in memory (some verbal,
+    some visual—which are stored in different parts of the brain), which
+    gives you multiple shots at later digging the information out of storage
+    (Kosslyn, 1994; Mayer, 2001; Moreno & Valdez, 2005). Furthermore, if
+    you are given only a name or a verbal description to remember, your
+    memory will be vastly improved if you can visualize (i.e., form a men-
+    tal image of) the named object or scene: not only will you create a sec-
+    ond type of representation (in addition to the verbal material itself) but
+    the mere effort of visualizing the described object or scene will enhance
+    subsequent memory.
+
+Evoking emotion. Leading someone to feel emotion when experiencing an
+    event generally will enable him or her to recall that event more effec-
+    tively. Emotion focuses attention and also causes the brain to devote
+    extra resources to storing the information. Negative emotions in par-
+    ticular narrow attention and focus one on details. For such negative
+    emotions, beta-blockers will remove this extra boost, which hints at
+    the underlying pharmacological events that produce this extra process-
+    ing (Erk et al., 2003; Levine & Pizarro, 2004; McGaugh, 2003, 2004).
+    For example, if you are anxious about how an interview will go (and do
+    not take beta-blockers), you probably will remember more details about
+    the interview than if you are not anxious.
+
+To summarize, I’ve just reviewed seven principles, all of which are spe-
+cial cases of the maxim “Think it through.”
+
+Principles that underlie “Make and use associations”
+
+The second overarching maxim is “Make and use associations.” It is useful
+to distinguish two general classes of these principles.
+
+Structure information by using associations The first class is “Structure
+information by using associations.” Five principles fall in this category:
+
+Promoting chunking. As we saw in the case of the marathon runner who could
+    memorize staggering numbers of randomly selected digits (Ericsson
+    et al., 1980), you can use associations you already have in your mem-
+    ory to organize material into relatively few chunks (organized units).
+    People can easily store in memory three or four chunks—and remark-
+    ably, each of these units itself can contain three or four chunks. For
+    example, if you want to learn a list of sixteen principles, figuring out
+    ways to organize them into roughly four (or fewer) groups of four (or
+    fewer) principles each should help. Organizing material into manage-
+    able units clearly facilitates learning (e.g., Brown, Roediger, & McDan-
+    iel, 2014; Mayer & Moreno, 2003).
+
+Building on prior associations. When learning something new, the more asso-
+    ciations you can find with information already stored in memory, the
+    better (e.g., Bransford, Brown, & Cocking, 2000; Glenberg & Robertson,
+    1999; Mayer, 2001). For example, when meeting a new person, you
+    might better remember his name by associating his face with that of
+    someone with the same name whom you already know. One way to do
+    this is to visualize the face of the person you know and then morph
+    that mental image into the face of the new person (Kosslyn, 1994). If
+    you do this a few times, you will associate the new person’s face with
+    that of the familiar person. And the familiar person’s face is already
+    associated with the appropriate name.
+    The fact that prior associations can be used to learn new information
+    resolves an old conundrum: At one time researchers worried about a “para-
+    dox of the expert,” which hinged on the fact that the more you know, the
+    easier it is to learn even more (Reder & Anderson, 1980; Smith, Adams,
+    & Schorr, 1978). The intuition was that the more you know, the “fuller”
+    memory should be—and hence it should be harder, not easier, to store new
+    information. However, researchers have learned that the more information
+    you already know, the more existing associations you can use to store new
+    information. The more branches you have, the more leaves and fruit can be
+    hung on this structure. Hence there’s no actual paradox.
+
+Presenting foundational material first. When complex information is to be
+     acquired, learning is enhanced when a teacher takes advantage of exist-
+     ing associations to provide the most basic material first, and then inte-
+     grates new material a bit at a time (Bransford, Brown, & Cocking, 2000;
+     Wandersee, Mintzes, & Novak, 1994). Presenting foundational material
+     first provides a backbone to which one can attach additional informa-
+     tion, allowing an organized mental structure to be built up over time.
+     For example, my presenting the two general maxims first should have
+     given you a structure for understanding the specific principles.
+    
+The following two principles build on the previous ones but focus spe-
+cifically on the relationship between examples and underlying principles.
+(By interrupting here and pointing this out, I hope to help you create two
+large chunks, which should help you get your mental arms around this
+material.)
+
+Exploiting appropriate examples. Abstract ideas cannot be fully understood
+     without examples. But examples must be memorable, in part by being
+     associated with prior information. Multiple examples of the same
+     material must be associated with each other so that they form a cluster
+     that is associated with the to-be-learned material. For example, when
+     teaching the concept of far transfer, it’s not enough for me to provide
+     the example that debate techniques learned in class should then be
+     used months later when arguing politics with friends. You would need
+     a few different examples of far transfer, and I would need to make sure
+     that you have associated them with each other, even though on the
+     surface they may appear very different (Hakel & Halpern, 2005).
+
+Relying on principles, not rote. Learning typically requires not just becom-
+     ing familiar with examples but also understanding the underlying
+     principles that organize and integrate examples (Kozma & Russell,
+     1997; Bransford, Brown, & Cocking, 2000). For example, the key to far
+     transfer is to distinguish between surface characteristics (the particular
+     example) and underlying deep characteristics (which tell you which
+     knowledge should be transferred to the present case). For instance,
+     the principles of debate can also be used in teaching, but that doesn’t
+     require becoming confrontational (a surface characteristic of debate)
+     but rather being sensitive to the other person’s goals and perspectives
+     (a deep characteristic). The principles must be associated with the
+     examples. In general, making explicit the ways that information relates
+     abstractly (at what is called a “deep structural level” in the literature) to
+     other information enhances memory (Chi & VanLehn, 2012).
+
+Create rich retrieval cues The other class of principles that falls under the
+     maxim “Make and use associations” is “Create rich retrieval cues.” The key
+     idea here is that you need to associate distinctive information with what
+     you learn so that you later can be effectively reminded of it when you want
+     to recall it.  Dynamic mental representations arise from recent experiences or
+     thoughts, and often are conscious; thus they are easy to recall. Struc-
+     tural representations, in contrast, are like the crates and boxes in that
+     giant warehouse in the last scene of Raiders of the Lost Ark. We can retain
+     uncounted numbers of such mental representations, and they often aren’t
+     well organized. We access these representations by using cues and remind-
+     ers. For example, you might associate one of those crates with a coffin,
+     and hence seeing that shape would remind you of it (and you then could
+     search for other such shapes, if the initial one turned out to be incorrect).
+     Thus, to be easily recalled, it’s crucial that structural representations include
+     characteristics that makes them easily cued later, which can include being
+     associated with a distinctive time and place. The following principles can
+     produce such cues.
+
+Creating associative chaining (a.k.a using story telling). Stories are built on a
+    series of interlocking causes and effects—this is the essence of a plot.
+    Creating an interlocking sequence of associations that has a narrative
+    arc—that is, a story—to integrate material will not only help you cre-
+    ate larger chunks (stories are one way to build associations to create
+    chunks) but, more than that, you also can use each part of the story
+    to cue the next part when you later recall the material. Such cueing
+    can greatly facilitate later recall of the information incorporated into
+    the story (Bower & Clark, 1969; Graesser, Olde, & Klettke, 2002). For
+    example, to learn the principles underlying the “Think it through”
+    maxim, you could create a story about a friend who uses each of these
+    principles, one at a time, in an effort to learn the computer program-
+    ming language Python, adopting a new principle when the previous
+    one proves inadequate.
+
+Using spaced practice. Cramming may be an efficient way to study, but it’s a
+    bad way to learn. Here’s an analogy: when I was young, I had a black
+    wooden desk. I thought it would look much better if I painted it white.
+    Being in a hurry, I ignored the advice to use several thin coats of paint
+    rather than one thick coat. I poured on a single thick coat. At first, it
+    seemed just fine; the black paint was covered up. But in practically no
+    time, the paint began to chip—and soon the desk was a blotchy mess,
+    much uglier than it was in the first place. Something similar happens
+    with memory: Trying to store information in one fell swoop leaves it
+    vulnerable to being lost. One reason for this is that if you cram, you
+    will have only one set of retrieval cues, the associations set up the one
+    time you stored the information. If you instead spread out studying
+    over time, you will associate the material with lots of different cues
+    (such as cues in the room or rooms where you study, your feelings at
+    the time, and thoughts you have while considering the information).
+    It is much better to use information repeatedly over a relatively long
+    span of time than to try to cram it in all at once in the course of learn-
+    ing it (Brown, Roediger, & McDaniel, 2014; Cepeda et al., 2006, 2008;
+    Cull, 2000). For example, when learning this material you might want
+    to read it once, and then reread it a few times to review.
+
+Establishing different contexts. Far transfer is the holy grail of learning. As
+    noted earlier, far transfer occurs when information learned in one con-
+    text (e.g., a classroom) is retrieved and applied in a very different con-
+    text (e.g., to a seemingly unrelated problem in a work environment
+    years later). Far transfer appears to be possible in large part because
+    one has learned a group of varied examples and has a firm grasp of the
+    principles that underlie the relevant material (Hakel & Halpern, 2005;
+    Van Merrienboer et al., 2006). But it also depends critically on know-
+    ing when learned information is relevant. To facilitate this, one should
+    associate the material with numerous different contexts. For example,
+    studying in different places will enhance your ability later to use the
+    information in different contexts.
+
+Avoiding interference. Distinctive retrieval cues are crucial in part because
+    they can help the learner avoid interference from other information
+    (Adams, 1967; Anderson & Neely, 1996). Psychologists have docu-
+    mented two types of interference. Proactive interference occurs when
+    material you have learned previously interferes with learning new
+    information. For example, if you learned Spanish, you might have a
+    problem learning that “de” is pronounced “duh” in French, not “day”
+    as it is in Spanish. Retroactive interference occurs when learning new
+    material impairs your ability to recall previously learned material. In
+    the language example, once you learn the French pronunciation, you
+    might have difficulty recalling the Spanish one. Creating distinctive
+    retrieval cues can help you avoid both types of interference (e.g., you
+    could associate the French pronunciation with an image of a French
+    person having difficulty understanding why a learner is having this
+    problem, perhaps dismissively saying “duh,” and a Spanish person tak-
+    ing a siesta in the middle of the “day”).
+
+Excerpt from Kosslyn, "Building The Intentional University", MIT Press (2017) p. 149.

@@ -1,0 +1,161 @@
+﻿Calculating eSports for Engineers Score
+
+eSports for Engineers 22041LTS
+
+Your overall score is the average of the most recent scores for each
+of the last 7 days, MON through SUN.  Scores that are more than 7 days old
+are not included in the calculation.  Enter your individual day
+scores in the launcher (run ./launcher.py in the base
+esports-for-engineers directory) to calculate your overall
+score, and to save a record of your game result files.
+
+Each day has a different theme - abstract strategy games for MON, WED,
+FRI, historical racing and flight sims TUE, THU and SAT, and an experimental
+society sim on SUN.  
+
+Note: there is no requirement to work on, e.g., a MON task 
+only on Monday.  Your most recent result (within the last 7 days) for MON 
+is what counts for your overall score, whether you obtained the score on 
+a Monday or not.
+
+Your score for an individual day is between zero and 1.  The score 
+is based on your performance on OKRs (see below).
+
+What is an OKR?  OKR stands for "Objective and Key Results".  OKR's
+are used in many organizations to break down major goals into a sequence
+of simpler tasks.  The objective is the overall destination, the
+key results are milestones along the way on the path to the objective.
+For more detail about OKRs, see "ObjectivesAndKeyResults_OKR.txt".
+
+There are two kinds of objectives, regular and aspirational.  Regular
+objectives are, in principle, readily achievable with some focus and
+discipline.  Aspirational objectives are stretch goals which may be
+very difficult to achieve.  The maximum score daily for completing any
+number of OKRs toward regular objectives is 0.7,  The maximum daily score
+for completing an inspirational OKR is 1.  In addition, if you
+obtain a score of 1, you can keep entering it for 30 days after you
+achieved it such that it will keep influencing your trailing 7 day (weekly)
+score as reported by launcher.py.
+
+How to obtain and calculate your daily score?  First, complete one or more
+tasks (OKR's) as described in the daily calculatingScore.txt file.  Suppose
+you completed OKR #1,1 and OKR #2,1 in MON/calculatingScore.txt.  Now add
+the scores for all the OKRs you completed.  Suppose you got the maximum
+score possible on both those OKRs.  Your total score would be 0.25 for OKR #1,1 plus
+0.50 for OKR #2,1, truncated at 0.7 because Objectives 1 and 2 are regular,
+not aspirational.  Thus your daily score in this example would be 0.7.
+
+An OKR score from an aspirational objective is treated the same way as 
+a regular OKR score if it is less than 0.7.  If you have one
+or more aspirational OKR scores greater than 0.7, your score for the day
+is your highest aspirational OKR score.
+
+Note: For each day you have the option of creating your own regular or
+aspirational objective(s) and OKR(s).  Objectives should align with
+the overall goal of learning and mastery of these complicated sims.   (See
+"metaLearning.txt", about how learning can be broken down into specific
+tasks, for inspiration.)  If you make your own OKRs, create a text
+file in the afterGameReport directory describing your OKR's so this
+can be included in your exported results file.  Scores from user-defined 
+OKRs can be included in your daily score as with any other OKR score.  
+
+All games should be set to maximum playing strength unless otherwise
+noted.  (Thus for MON the wBridge5 level should be set to 5).  In the
+sims, realism settings should be set to 100% realism, except that in
+THU/battleOfBritain.sh ground collisions can be set to off.)
+
+
+Scoring example:
+
+The player selects OKR #1,1 for MON, and after playing Contract
+Bridge with the Duplicate Bridge hands as described in
+MON/calculatingScore.txt received a total score of -10 International
+Match Points (IMP).  The score for MON is then (-10+18)/20*.5=0.20 per
+the formula in MON/calculatingScore.txt.  If the player had completed
+another OKR listed in MON/calculatingScore.txt as well, the two scores 
+would be added, up to a maxiumum possible score of 0.7 as no 
+aspirational objectives are listed in MON/calculatingScore.txt.  This
+score is reported in launcher.py, as is the average of latest MON, TUE,
+WED, THU, FRI, SAT, SUN daily scores, with any score more than one
+week old excluded.
+
+In order to record a score for a particular day using launcher.py, you
+must put one or more supporting files in the afterGameReport
+directory.  In most cases, when the player saves the game, launcher.py will
+automatically put that saved game files in afterGameReport.  Note
+that launcher.py only collects game results that have been saved in the last
+2 hours.
+
+Remember to record your game when playing a racing or flight sim.  
+For TUE, remember to save the replay after your game.  For THU, 
+turn on the gun camera after entering the 3D view, then save the 
+replay after you exit this view.  For SAT, if using free falcon type 
+"F" after entering the 3D view to record.  In the flight sims, toggle the camera 
+off during uneventful parts of the flight or edit these parts out 
+afterwards on the replay screen.
+
+Remember to save your game if playing Bridge, Chess or Weiqi.  (For
+wBridge5.sh, you will need to set the emulated windows version to XP using
+./setWineDisplayResoluton.sh in order to save the file in PBN format.
+Switching to the advanced version of wine, ./wine_experimental.sh
+will also have this effect.)
+
+You can also write your comments about your game experience to a text
+file, then save this file to the afterGameReport directory.  Telling
+a story about your game is termed "associative chaining" in learning
+science, as by telling a story you are linking events together in 
+a causal chain, thus enhancing memory and learning.
+
+Screenshots of game results and .txt files written by the user are
+also useful additions to the afterGameReport directories.  Saving game
+output is needed so you can compare scores and experiences with others
+playing esports-for-engineers.
+
+Example: you play the MON game (Contract Bridge), then save the game
+as a .pbn file.  You copy this file to MON/afterGameReport, along with
+a screenshot .png of your game and the Dup (closed room) game showing
+your IMP score, with two screenshots per game so you can see all 13
+tricks for each game.  You play several more games, following the same
+procedure each time.  You also add screenshots from the bcalc bridge
+analyzer and a text file commentary on your games to the
+MON/afterGameReport directory.
+
+Then you calculate your MON score and enter it in launcher.py.  When
+it saves your MON score, launcher.py automatically moves all the files
+in MON/afterGameReport into its own filesForLauncher directory.  You
+can export all your scores and associated files from launcher.py and
+send the exported file to others.
+
+Which files you put in each afterGameReport directory is up to you.  A
+simple text file describing your game is sufficient, but it is
+recommended to save the following game output files in the
+afterGameReport directory (note that some will be saved automatically, if
+less than 2 hours old):
+
+MON: .pbn or txt files showing deal, bidding and tricks.
+
+TUE: .rpy files, which are stored in TUE/WP/drive_c/Sierra/GPL/replay
+
+WED: .pgn file containing chess game vs. nibbler along with commentary
+generated by scid/stockfish
+
+THU: .cam replay file.  For Battle of Britain these are stored, store in
+THU/BattleOfBritain/WP/drive_c/Program Files (x86)/Rowan
+Software/Battle Of Britain/VIDEOS
+or, for Mig Alley
+THU/MigAlley/WP/drive_c/rowan/mig/Videos
+
+FRI: .sfg file, if playing against KaTrain, saved game files are in
+FRI/WP/drive_c/KaTrain/sgfout.  Screenshot .png files showing
+./goreviewpartner.sh ./sabaki.sh or ./q5go.sh analysis are also
+useful.
+
+SAT: Briefing.txt, debrief.txt and .vhs files, where the text files
+are placed in the SAT directory by ./getBriefingDebriefing.sh and
+in-game .vhs recording files saved by the user are in
+SAT/WP/drive_c/FreeFalcon6/acmibin, or, if using the BMS upgrade
+versions, SAT/BMS43x/WP/drive_c/Falcon BMS 4.3x/User/Acmi, where x=2,
+3 or 5 depending on the BMS version you download.
+
+SUN: 
+Screenshots and saved game files from the poker games
