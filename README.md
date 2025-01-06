@@ -1,7 +1,7 @@
 # esports-for-engineers
 Let's work together to maintain some of the best old engineering simulation games.  
 
-This project provides a linux installer containing a free, award-winning sim or strategy game for each day of the week. The games are organized into a weeklong mindsports decathlon, with a mechanism for scoring each day and saving the user's game files.  Some slides describing the game package are [here](https://github.com/sim-museum/esports-for-engineers/blob/master/esports-for-engineers-brochure.pdf).  There is also a self-study class [syllabus](https://github.com/sim-museum/esports-for-engineers/blob/master/files/syllabusFor_eSportsForEngineers.pdf) for learning the games.
+This project provides a linux installer containing a free, award-winning sim or strategy game for each day of the week. The games are organized into a weeklong mindsports decathlon, with a mechanism for scoring each day and saving the user's game files.  Some slides describing the game package are [here](https://github.com/sim-museum/esports-for-engineers/blob/master/files/esports-for-engineers-brochure.pdf).  There is also a self-study class [syllabus](https://github.com/sim-museum/esports-for-engineers/blob/master/files/syllabusFor_eSportsForEngineers.pdf) for learning the games.
 
 To play the games:
 
