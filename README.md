@@ -5,11 +5,11 @@ This project provides a linux installer containing a free, award-winning sim or 
 
 To play the games:
 
-1. choose either the Ubuntu 22.04 LTS package or the newer Ubuntu 24.04 LTS package.  The 22.04 package is 
+1. Choose either the Ubuntu 22.04 LTS package or the newer Ubuntu 24.04 LTS package.  The 22.04 package is 
 quicker to download and install.  The 24.04 package provides incremental improvements to stability, 
 documentation and games, and is supported long-term.
  
-2. install the operating system for the package you chose, either Ubuntu 22.04 LTS or Ubuntu 24.04 LTS. A partition
+2. Install the operating system for the package you chose, either Ubuntu 22.04 LTS or Ubuntu 24.04 LTS. A partition
 size of at least 400 GB is recommended.
 
 3. Download and unpack the chosen game package, either the [22.04 game package](https://www.mediafire.com/file/1cz9zq1z54x7765/esports-for-engineers22041LTS.tar.gz/file) or the [24.04 game package](https://mega.nz/file/fE8R0YRT#TKcgjf4Id4txC0qA3mv0Pqam812DTl2klqEvB1v7Iuc)
