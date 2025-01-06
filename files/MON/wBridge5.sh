@@ -17,6 +17,9 @@
 
 # Set Wine prefix directory
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
+
 
 # Check if Wbridge5 is already installed
 if [ -d "$WINEPREFIX/drive_c/wbridge5" ]; then

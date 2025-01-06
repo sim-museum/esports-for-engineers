@@ -10,9 +10,11 @@
 
 # Set WINEPREFIX
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v win98  2>/dev/null 1>/dev/null
 
 # Define variables for readability
-INSTALL_DIR="$WINEPREFIX/../INSTALL"
+export INSTALL_DIR="$WINEPREFIX/../INSTALL"
 
 # Check if SDOE is already installed
 if [ -f "$WINEPREFIX/drive_c/Program Files/Fighter Squadron/Sdemons.exe" ] && \

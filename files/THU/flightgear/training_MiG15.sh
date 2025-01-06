@@ -30,8 +30,8 @@ if [ ! -d "$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020" ]; then
 fi
 
 # Set variables for improved readability
-flightgear_exec="/usr/games/fgfs"
-fgaddon_dir="$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020"
+export flightgear_exec="/usr/games/fgfs"
+export fgaddon_dir="$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020"
 
 # Launch FlightGear with MiG 15 aircraft and set time to noon on June 1, 2020 at the user's location
 echo " "

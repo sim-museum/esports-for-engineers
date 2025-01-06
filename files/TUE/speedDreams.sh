@@ -1,13 +1,17 @@
 #!/bin/bash
 
 # Set the Wine prefix to a directory named 'WP' in the current working directory
-WINEPREFIX="$PWD/WP"
+export WINEPREFIX="$PWD/WP"
+#export WINEARCH=win32
+#wine winecfg -v winxp  2>/dev/null 1>/dev/null
 
 # Move the Speed Dreams AppImage to the Wine prefix's 'INSTALL' directory
 mv "$WINEPREFIX/../../tar/Speed-Dreams-2.2.3-x86_64.AppImage" "$WINEPREFIX/../INSTALL" 2>/dev/null 1>/dev/null
 
 # Check if the Speed Dreams AppImage exists in the 'INSTALL' directory
 if [ -f "$WINEPREFIX/../INSTALL/Speed-Dreams-2.2.3-x86_64.AppImage" ]; then
+    # make sure this linux binary is executable
+    sudo chmod +x "$WINEPREFIX/../INSTALL/Speed-Dreams-2.2.3-x86_64.AppImage"
     # Move the AppImage to the Wine prefix directory
     mv "$WINEPREFIX/../INSTALL/Speed-Dreams-2.2.3-x86_64.AppImage" "$WINEPREFIX"
 fi

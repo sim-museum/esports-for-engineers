@@ -6,6 +6,9 @@ if [ $? -ne 0 ]; then
 fi
 
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
+
 
 #copy briefing file to SAT directory
 

@@ -15,14 +15,19 @@
 #     exit 1
 # fi
 
+#!/bin/bash
+
 # Set Wine prefix directory
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp
 
 # Check if Brain Workshop is already installed
-if [ -d "$WINEPREFIX/drive_c/Program Files (x86)/Brain Workshop" ]; then
+if [ -d "$WINEPREFIX/drive_c/Program Files/Brain Workshop" ]; then
     # If installed, change directory and run Brain Workshop
-    cd "$WINEPREFIX/drive_c/Program Files (x86)/Brain Workshop"
+    cd "$WINEPREFIX/drive_c/Program Files/Brain Workshop"
     wine brainworkshop.exe 2>/dev/null 1>/dev/null
+#    deactivate
     clear
     # Display README instructions
     cat Readme-instructions.txt
@@ -31,9 +36,9 @@ if [ -d "$WINEPREFIX/drive_c/Program Files (x86)/Brain Workshop" ]; then
 else
     # Check Wine version for compatibility
     clear
-    if wine --version | grep -q "wine-6.0"; then
+    if wine --version | grep -q "wine-9.0"; then
         clear
-        printf "Version 6.0 of wine detected.\nFor installation, Brain Workshop requires wine version 7 or greater.\n\nFrom the esports-for-engineers directory, run \n\n./wine-experimental.sh\n\nto install wine 7.\n\nThen run this script again.\n\n"
+        printf "Version 9.0 of wine detected.  This version of wine will not install Brain workshop.  Versions that will install Brain workshop include:\nwine-ge-8-26-x86 under lutris, and all tested versions of winehq staging. Run this installation .exe from lutris, or install winehq-staging.\n\nThen run this script again.\n\n"
         exit 0
     fi
 
@@ -43,7 +48,7 @@ else
     wine "$WINEPREFIX/../INSTALL/brainworkshop-4.8.4-win32-setup.exe" 2>/dev/null 1>/dev/null
     clear
     # Display README instructions
-    cat "$WINEPREFIX/drive_c/Program Files (x86)/Brain Workshop/Readme-instructions.txt"
+    cat "$WINEPREFIX/drive_c/Program Files/Brain Workshop/Readme-instructions.txt"
     printf "\n\nRun this script again to start the program\n\n"
     exit 0
 fi

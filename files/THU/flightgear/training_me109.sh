@@ -13,7 +13,7 @@ if [ ! -f /usr/games/fgfs ]; then
 fi
 
 # Check if FlightGear add-on aircraft are installed
-FG_AIRCRAFT_DIR="$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020"
+export FG_AIRCRAFT_DIR="$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020"
 if [ ! -d "$FG_AIRCRAFT_DIR" ]; then
     clear
     echo "It appears that the FlightGear add-on aircraft are not installed."

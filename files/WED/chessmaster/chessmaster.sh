@@ -10,11 +10,13 @@
 
 # Set the Wine prefix to the current directory's "WP" folder
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
 
 # Check if Chessmaster executable exists
-if [ -f "$WINEPREFIX/drive_c/Program Files (x86)/Ubisoft/Chessmaster Grandmaster Edition/Chessmaster.exe" ]; then
+if [ -f "$WINEPREFIX/drive_c/Program Files/Ubisoft/Chessmaster Grandmaster Edition/Chessmaster.exe" ]; then
     # Navigate to Chessmaster directory
-    cd "$WINEPREFIX/drive_c/Program Files (x86)/Ubisoft/Chessmaster Grandmaster Edition"
+    cd "$WINEPREFIX/drive_c/Program Files/Ubisoft/Chessmaster Grandmaster Edition"
     # Run Chessmaster
     wine Chessmaster.exe >/dev/null 2>&1
     # Clear the terminal

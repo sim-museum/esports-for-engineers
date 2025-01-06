@@ -7,10 +7,14 @@
 #!/bin/bash
 
 # Define variables for directory paths
-ISO_MNT_DIR="$PWD/isoMnt"
-INSTALL_DIR="$PWD/INSTALL"
+export ISO_MNT_DIR="$PWD/isoMnt"
+export INSTALL_DIR="$PWD/INSTALL"
 export WINEPREFIX="$PWD/WP"
-FALCON_EXE_PATH="$WINEPREFIX/drive_c/Program Files (x86)/Lead Pursuit/Battlefield Operations/FalconAF.exe"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
+
+
+export FALCON_EXE_PATH="$WINEPREFIX/drive_c/Program Files/Lead Pursuit/Battlefield Operations/FalconAF.exe"
 
 # Check if FalconAF is installed
 if [ ! -f "$FALCON_EXE_PATH" ]; then
@@ -27,10 +31,10 @@ if [ ! -f "$FALCON_EXE_PATH" ]; then
         
         # Install FalconAF
         wine "$ISO_MNT_DIR/Setup.exe" 2>/dev/null 1>/dev/null
-        cp "$INSTALL_DIR/FalconAF/display.dsp" "$WINEPREFIX/drive_c/Program Files (x86)/Lead Pursuit/Battlefield Operations/config"
-        cp "$INSTALL_DIR/FalconAF/Viper."* "$WINEPREFIX/drive_c/Program Files (x86)/Lead Pursuit/Battlefield Operations/config"
-        cp "$INSTALL_DIR/FalconAF/global.cfg" "$WINEPREFIX/drive_c/Program Files (x86)/Lead Pursuit/Battlefield Operations"
-        cp "$INSTALL_DIR/FalconAF/BFOpslog.txt" "$WINEPREFIX/drive_c/Program Files (x86)/Lead Pursuit/Battlefield Operations"
+        cp "$INSTALL_DIR/FalconAF/display.dsp" "$WINEPREFIX/drive_c/Program Files/Lead Pursuit/Battlefield Operations/config"
+        cp "$INSTALL_DIR/FalconAF/Viper."* "$WINEPREFIX/drive_c/Program Files/Lead Pursuit/Battlefield Operations/config"
+        cp "$INSTALL_DIR/FalconAF/global.cfg" "$WINEPREFIX/drive_c/Program Files/Lead Pursuit/Battlefield Operations"
+        cp "$INSTALL_DIR/FalconAF/BFOpslog.txt" "$WINEPREFIX/drive_c/Program Files/Lead Pursuit/Battlefield Operations"
     else
         echo ""
         echo "FalconAF is not installed, and the FalconAF iso is not mounted at $ISO_MNT_DIR for installation."

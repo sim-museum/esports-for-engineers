@@ -13,11 +13,11 @@
 #!/bin/bash
 
 # Set the Wine prefix directory
-WINEPREFIX="$PWD/WP"
+export WINEPREFIX="$PWD/WP"
 
 # Define common directory paths for readability
-INSTALL_DIR="$WINEPREFIX/../INSTALL"
-FALCON_DIR="$WINEPREFIX/drive_c/Falcon BMS 4.35"
+export INSTALL_DIR="$WINEPREFIX/../INSTALL"
+export FALCON_DIR="$WINEPREFIX/drive_c/Falcon BMS 4.35"
 
 # Check if Falcon BMS 4.35 is already installed
 if [ -d "$FALCON_DIR" ]; then
@@ -52,7 +52,8 @@ then
    echo "4. wine Setup.exe 2>/dev/null 1>/dev/null"
    echo " "
    echo "Click through the dialog boxes and ignore error messages by selecting, e.g., OK, Next, Register Later. When prompted to install Wine Mono, do not install it."
-   echo "5. cd .."
+   echo "Return to the BMS435 directory:"
+   echo "5. cd ../.."
    echo ""
    echo "After you've installed the original MicroProse Falcon 4,"
    echo "COMPLETE ALL 4 STEPS ABOVE, and then"

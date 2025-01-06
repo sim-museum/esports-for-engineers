@@ -2,12 +2,13 @@
 
 # Set the Wine prefix directory
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
 
 # Function to display installation instructions
 display_install_instructions() {
     clear
     printf "\nCut and paste the commands below at a terminal prompt.\nDo not install mono, if prompted to do so:\n"
-    printf "cd TUE/NR2003\n"
     printf "export WINEPREFIX=\$PWD/WP\n"
     printf "winetricks vcrun2003 2>/dev/null 1>/dev/null\n"
     printf "sudo mount -o loop $WINEPREFIX/../INSTALL/NR2003.iso $WINEPREFIX/../isoMnt\n\n"
@@ -71,7 +72,7 @@ if [ -f "$WINEPREFIX/../isoMnt/autorun.exe" ]; then
     printf "In the Graphics tab, deselect Allow the window manager to decorate the windows,\n"
     printf "select Emulate a virtual desktop,\n"
     printf "and set Desktop size to your monitor display resolution.\n\n"
-    printf "Press a key to continue ...\n"
+    printf "Press ENTER to continue ...\n"
     
     # Run winecfg and wait for user input
     winecfg 2>/dev/null 1>/dev/null
@@ -83,19 +84,19 @@ if [ -f "$WINEPREFIX/../isoMnt/autorun.exe" ]; then
     printf "Do not select Register or look for updates\n\n"
     printf "When asked for a serial number, enter\nRAB2-RAB2-RAB2-RAB2-8869\n"
     printf "Write down this serial number, as it will not be displayed on the screen during installation.\n"
-    printf "Press a key to begin installation ...\n"
+    printf "Press ENTER to begin installation ...\n"
     
     # Run autorun and wait for user input
     read -r replyString
     wine autorun.exe 2>/dev/null 1>/dev/null
     clear
-    printf "\nPress a key to install the 1201 patch\n"
+    printf "\nPress ENTER to install the 1201 patch\n"
     read -r replyString
     
     # Navigate to INSTALL directory and install patches
     cd "$WINEPREFIX/../INSTALL"
     wine NASCAR-Racing-2003-Season_Patch_Win_EN_Patch-1201.exe 2>/dev/null 1>/dev/null
-    printf "\nPress a key to install the fix to 1201 patch\n"
+    printf "\nPress ENTER to install the fix to 1201 patch\n"
     read -r replyString
     
     # Copy executable to game directory

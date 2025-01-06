@@ -1,6 +1,9 @@
 #!/bin/bash
 
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
+
 
 if [ -d "$WINEPREFIX/drive_c/FreeFalcon6/Docs/SP3" ]
 then

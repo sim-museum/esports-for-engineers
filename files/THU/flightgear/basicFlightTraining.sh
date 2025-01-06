@@ -11,7 +11,7 @@
 # Launches FlightGear with specified parameters.
 
 # Store frequently used directory paths for better readability
-flightgear_path="/usr/games/fgfs"
+export flightgear_path="/usr/games/fgfs"
 
 # Check if FlightGear is installed
 if [ ! -f "$flightgear_path" ]; then

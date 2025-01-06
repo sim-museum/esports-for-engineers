@@ -15,11 +15,13 @@
 
 # Set the WINEPREFIX environment variable
 export WINEPREFIX=$PWD/WP
+export WINEARCH=win32
+wine winecfg -v winxp   2>/dev/null 1>/dev/null
 
 # Check if rFactor is already installed
-if [ -f "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/rFactor.exe" ]; then
+if [ -f "$WINEPREFIX/drive_c/Program Files/rFactor/rFactor.exe" ]; then
     # If rFactor is installed, execute it
-    cd "$WINEPREFIX/drive_c/Program Files (x86)/rFactor"
+    cd "$WINEPREFIX/drive_c/Program Files/rFactor"
     wine rFactor.exe 2>/dev/null 1>/dev/null
     clear
     # Provide optional scripts for rFactor
@@ -50,7 +52,7 @@ if [ ! -d "$WINEPREFIX/../INSTALL/newTracks" ]; then
 fi
 
 # Check if rFactor.exe exists after installation
-if [ ! -f "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/rFactor.exe" ]; then
+if [ ! -f "$WINEPREFIX/drive_c/Program Files/rFactor/rFactor.exe" ]; then
     # Provide installation instructions
     if [ -f "$WINEPREFIX/../INSTALL/isoMnt/Setup.exe" ]; then
                clear
@@ -70,11 +72,15 @@ if [ ! -f "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/rFactor.exe" ]; then
         echo "so the script can proceed to install additional cars and tracks."
         read replyString
         # Launch winecfg to configure Wine (silently)
-        WINEARCH=win32 winecfg 2>/dev/null 1>/dev/null
-        clear
+        export WINEARCH=win32 winecfg 2>/dev/null 1>/dev/null
+        wine winecfg -v winxp  2>/dev/null 1>/dev/null
+	
+	clear
         echo "If dxvk is not installed, type CONTROL C and install dxvk via the two commands "
 	echo "below, then run this script again:"
         echo "export WINEPREFIX=\$PWD/WP"
+        echo "export WINEARCH=win32"
+        echo "wine winecfg -v winxp"
         echo "winetricks dxvk  2>/dev/null 1>/dev/null"
         echo ""
         echo "Otherwise, type ENTER to continue ..."
@@ -102,13 +108,14 @@ if [ ! -f "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/rFactor.exe" ]; then
         wine "$WINEPREFIX/../INSTALL/isoMnt/Setup.exe" 2>/dev/null 1>/dev/null
         
         # Copy rFactor executable to its installation directory (silently)
-        cp "$WINEPREFIX/../../../tar/rFactor.exe" "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/" 2>/dev/null 1>/dev/null
+        cp "$WINEPREFIX/../../../tar/rFactor.exe" "$WINEPREFIX/drive_c/Program Files/rFactor/" 2>/dev/null 1>/dev/null
        
         # Set directory paths
         formula_e_dir="$WINEPREFIX/../INSTALL/Bravo Formula E 2019-20 Mod/"
         f1_1958_dir="$WINEPREFIX/../INSTALL/F1 1958 by ORM - v4.35 COMPLETE/F1 1958 by ORM - v4.35 COMPLETE/"
+        f1_1958_noDir="$WINEPREFIX/../INSTALL/F1 1958 by ORM - v4.35 COMPLETE/F1 1958 by ORM - v4.35 COMPLETE"
         f1lr_mod_dir="$WINEPREFIX/../INSTALL/F1LR_mod_V203/Mod/"
-        rfactor_dir="$WINEPREFIX/drive_c/Program Files (x86)/rFactor/"
+        rfactor_dir="$WINEPREFIX/drive_c/Program Files/rFactor/"
 
         # Inform about and install the 2019 Formula E carset
         echo ""
@@ -120,7 +127,7 @@ if [ ! -f "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/rFactor.exe" ]; then
         echo ""
         echo "Installing 1958 carset"
         echo ""
-        mv "$f1_1958_dir/Gamedata" "$f1_1958_dir/GameData"
+        mv "$f1_1958_noDir/Gamedata" "$f1_1958_noDir/GameData"
         rsync -a "$f1_1958_dir" "$rfactor_dir"
         
         # Inform about and install the 1967 carset
@@ -134,22 +141,24 @@ if [ ! -f "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/rFactor.exe" ]; then
         echo ""
         echo "Installing 60's sportscars Historix1.9 (large: takes 4 minutes to load)"
         echo ""
-        rsync -a "$WINEPREFIX/../INSTALL/Historix1.9/Historix/" "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/"
+        rsync -a "$WINEPREFIX/../INSTALL/Historix1.9/Historix/" "$WINEPREFIX/drive_c/Program Files/rFactor/"
         
         echo ""
         echo "Installing 60's tracks:"
         echo ""
 
-        rsync -a "$WINEPREFIX/../INSTALL/newTracks/FDsign Spa58 Rfactor/" "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/GameData/"
-        rsync -a "$WINEPREFIX/../INSTALL/newTracks/2/Aintree 1955 v1 by jpalesi/" "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/"
-        rsync -a "$WINEPREFIX/../INSTALL/newTracks/2/Imola1960s_v1.0/GameData/" "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/GameData/"
+        rsync -a "$WINEPREFIX/../INSTALL/newTracks/FDsign Spa58 Rfactor/" "$WINEPREFIX/drive_c/Program Files/rFactor/GameData/"
+        rsync -a "$WINEPREFIX/../INSTALL/newTracks/2/Aintree 1955 v1 by jpalesi/" "$WINEPREFIX/drive_c/Program Files/rFactor/"
+        rsync -a "$WINEPREFIX/../INSTALL/newTracks/2/Imola1960s_v1.0/GameData/" "$WINEPREFIX/drive_c/Program Files/rFactor/GameData/"
         
        # Script to copy new tracks and setups for rFactor
 
        # Define the source and destination paths
        SOURCE_DIR="$WINEPREFIX/../INSTALL/newTracks/2"
-       DEST_DIR="$WINEPREFIX/drive_c/Program Files (x86)/rFactor/GameData/Locations"
-       SETUPS_DIR="$WINEPREFIX/drive_c/Program Files (x86)/rFactor/UserData/"
+       SOURCE_OTHER_DIR="$WINEPREFIX/../INSTALL/newTracks/"
+
+       DEST_DIR="$WINEPREFIX/drive_c/Program Files/rFactor/GameData/Locations"
+       SETUPS_DIR="$WINEPREFIX/drive_c/Program Files/rFactor/UserData/"
        
        # Function to copy tracks
        copy_tracks() {
@@ -159,28 +168,30 @@ if [ ! -f "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/rFactor.exe" ]; then
            echo ""
            cp -R "$SOURCE_DIR/$track_name" "$DEST_DIR"
        }
-       
+       copy_other_tracks() {
+           local track_name=$1
+           echo ""
+           echo "$track_name"
+           echo ""
+           cp -R "$SOURCE_OTHER_DIR/$track_name" "$DEST_DIR"
+       }
+
        # Function to copy setups
        copy_setups() {
            echo ""
-           printf "\nPlacing HistoricX setups in\n"$WINEPREFIX"/drive_c/Program Files (x86)/rFactor/UserData\n"
+           printf "\nPlacing HistoricX setups in\n"$WINEPREFIX"/drive_c/Program Files/rFactor/UserData\n"
            cp -R "$WINEPREFIX/../INSTALL/HistorX 1.96 Club setups 2016/" "$SETUPS_DIR"
        }
        
-       # move directories that are one level up to $SOURCE_DIR
-       mv "$SOURCE_DIR/../67panorama" "$SOURCE_DIR"
-       mv "$SOURCE_DIR/../Avus1967_v1.0_by_ZWISS_for_rF/Avus1967" "$SOURCE_DIR" 
-       mv "$SOURCE_DIR/../BremgartenGP_54" "$SOURCE_DIR"
-       mv "$SOURCE_DIR/../Monza_1000km" "$SOURCE_DIR"
-
        # Copy tracks
        copy_tracks "Brands Hatch 1950 v1_0 by Rodrrico"
        copy_tracks "Bugatti67"
        copy_tracks "Clermont65"
-       copy_tracks "67panorama"
-       copy_tracks "Avus1967_v1.0_by_ZWISS_for_rF/Avus1967"
-       copy_tracks "BremgartenGP_54"
-       copy_tracks "Monza_1000km"
+       copy_other_tracks "67panorama"
+       copy_other_tracks "Avus1967_v1.0_by_ZWISS_for_rF/Avus1967"
+       copy_other_tracks "BremgartenGP_54"
+       copy_other_tracks "Monza_1000km"
+       copy_other_tracks "FDsign Spa58 Rfactor"
        copy_tracks "60s Oulton Park v1_0 by philrob/60Oulton"
        copy_tracks "Monaco_1967_by_Fero/Monaco67"
        copy_tracks "Nurburg67"
@@ -189,8 +200,8 @@ if [ ! -f "$WINEPREFIX/drive_c/Program Files (x86)/rFactor/rFactor.exe" ]; then
        copy_tracks "Sebring1970_v1"
        copy_tracks "snett"
        copy_tracks "Solitude_64"
-       copy_tracks "Zeltweg/"
-       copy_tracks "Zandvoort67/"
+       copy_tracks "Zeltweg"
+       copy_tracks "Zandvoort67"
        
        # Copy setups
        copy_setups

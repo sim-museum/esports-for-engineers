@@ -9,11 +9,14 @@
 #!/bin/bash
 
 # Set variables for directory paths
-INSTALL_DIR="$PWD/INSTALL"
-WINEPREFIX_DIR="$PWD/WP"
+export INSTALL_DIR="$PWD/INSTALL"
+export WINEPREFIX_DIR="$PWD/WP"
+
 
 # Export Wine prefix
 export WINEPREFIX="$WINEPREFIX_DIR"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
 
 # Check if FreeFalcon6 is installed
 if [ -d "$WINEPREFIX/drive_c/FreeFalcon6" ]; then

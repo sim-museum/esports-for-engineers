@@ -1,5 +1,5 @@
 ﻿THU Scoring
-eSports for Engineers 22041LTS 
+eSports for Engineers 24041LTS 
 
 Note: To avoid graphics glitches with the THU sims, pay careful
 attention to graphics settings.  Use a dual monitor setup if possible, 
@@ -127,6 +127,86 @@ many scenario before attempting this.
 Where k is the number of planes you shoot down,
 
 score= {1-(3-k)/3}*.35, maximum score .35
+
+---------------------------------------------------------------
+OKR #1, 3
+
+Neutralize Enemy Airfields
+Tasks:
+
+    Select a high-value MiG airfield near the front lines (e.g., Kimpo or Chuncheon) and plan a two-wave strike mission:
+        First wave: Escorts (F86 BARCAPs) + Bombers (medium bombers for AAA suppression).
+        Second wave: Clean-up crew to maximize airfield destruction before repair rates normalize.
+    Achieve a 10:1 kill ratio in your escort (BARCAP) flights during airfield suppression.
+
+Scoring:
+
+    +0.2 for planning and executing a two-wave mission that successfully disables an enemy airfield.
+    +0.1 for maintaining or exceeding a 10:1 MiG kill ratio in the mission.
+---------------------------------------------------------------
+OKR #1, 4 
+
+Bridge Demolition
+Tasks:
+
+    Use bombers to destroy three strategic bridges in one session, focusing on key regions (e.g., Seoul's bridges or supply chokepoints).
+    Ensure mission efficiency by:
+        Using 1,000lb bombs for splash damage.
+        Coordinating wingman flight paths to avoid mid-air collisions during bomb drops.
+        Eliminating AI’s 90° break-off issue with optimized attack angles.
+
+Scoring:
+
+    +0.1 for each bridge successfully destroyed (up to a maximum of +0.3 per session).
+    +0.05 bonus for completing the session without losing any AI wingmen.
+---------------------------------------------------------------
+OKR #1, 5
+
+Supply Chain Disruption 
+Tasks:
+
+    Plan and execute a mission targeting a supply depot or marshalling yard, using reconnaissance to identify high-value targets and AAA clusters.
+    Include a Flak suppression flight preceding the bombing run, followed by a clean-up flight to maximize tonnage destruction.
+    Prioritize Seoul’s Marshalling Yard for a large-scale operation after neutralizing adjacent airfields.
+
+Scoring:
+
+    +0.25 for successfully neutralizing a marshalling yard with minimal losses (<20% aircraft loss).
+    +0.1 for successfully clearing Flak threats prior to the bombing run.
+    +0.05 for recon before the strike and successful identification of hidden supply clusters.
+
+---------------------------------------------------------------
+OKR #1, 6
+
+Escort and BARCAP 
+Tasks:
+
+    Assign specific roles to escort groups (e.g., "Right and High," "Rear") to minimize MiG attacks on bombers.
+    Maintain high-altitude positioning with BARCAP near key enemy airfields while protecting UN strike missions.
+
+Scoring:
+
+    +0.1 for completing any escort mission without a single bomber loss.
+    +0.15 for achieving at least five MiG kills during a BARCAP mission.
+
+---------------------------------------------------------------
+OKR #1, 7 
+
+Reconnaissance and Mission Customization
+Tasks:
+
+    Use the “Photo” feature to recon three target sites before a mission, identifying AAA threats and optimal approach routes.
+    Save and execute at least one custom mission profile for targeting either:
+        Supply depots.
+        Strategic bridges.
+        Marshalling yards.
+
+Scoring:
+
+    +0.15 for successfully completing a custom mission with recon-based intel.
+    +0.1 for avoiding damage to high-priority UN aircraft (e.g., F86s, medium bombers).
+
+
 ---------------------------------------------------------------
 OKR #2, 1
 
@@ -136,10 +216,39 @@ decide whether you won or not, but explain your decision in a text
 file placed in THU/afterGameReport along with supporting game output
 files and screenshots.
 
+---------------------------------------------------------------
 OKR #2, 2
 
 score=1 if you win the entire Battle of Britain (playing either the Great Britain
 or the German side), or if you win the Mig Alley Spring Offensive, 0 otherwise.  
 A score of 1 is valid for one month.  Save files supporting any claims to victory 
 to THU/afterGameReport as with the previous OKR's.
+
+---------------------------------------------------------------
+
+OKR #2, 3
+
+Dynamic RAF Interception Tactics
+
+    Tasks:
+        Define patrols over radar gaps, convoys, and coastal regions.
+        Use "Revector" to redirect squadrons mid-flight to intercept raids.
+        Optimize interception timing to neutralize bombers before they reach their targets.
+    Scoring:
+        +0.15 for successfully intercepting three raids in a single session using optimized timing and patrol placement.
+
+---------------------------------------------------------------
+
+OKR #2, 4
+
+Luftwaffe Campaign Tactical Adjustments
+
+    Tasks:
+        Use reconnaissance missions to improve strategic target prioritization.
+        Adjust escort formations (tied, free, return escort percentages) based on raid difficulty.
+        Review post-raid results in the Mission Folder to refine bomber and fighter allocations.
+    Scoring:
+        +0.1 for successfully using directives to plan multi-wave raids.
+        +0.05 for analyzing raid results and implementing adjustments.
+
 

@@ -6,4 +6,4 @@ echo ""
 echo "Then calibrate katago to your computer."
 echo "see installTips.pdf for details."
 
-./INSTALL/sabaki-v0.52.0-linux-x64.AppImage -disable-gpu-sandbox 2>/dev/null 1>/dev/null
+./INSTALL/sabaki-v0.52.0-linux-x64.AppImage --no-sandbox 2>/dev/null 1>/dev/null

@@ -272,3 +272,9 @@ Once in katrain, left click on the bars icon at upper left and select
 General & Engine Settings.  Choose FRI/INSTALL/katago/katagoCpuOnly
 as your engine, or download one of the engines recommended by katrain.  
 Similarly for the model file. 
+
+Q: Compare esports-for-engineers22041LTS.tar.gz vs. esports-for-engineers2404LTS.tar.gz
+A: The 22.04 version is simpler and easier to install, but the Operating System it runs on, Ubuntu 22.04, is
+only supported for 2 more years. The 24.04 version is harder to install, but provides a new game
+(CFL football), contains many bug fixes, and, through lutris integration, provides much better
+stability for the flight sims Mig Alley and Rowan's Battle of Britain.  

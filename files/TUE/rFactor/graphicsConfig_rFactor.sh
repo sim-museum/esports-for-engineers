@@ -14,8 +14,7 @@ fi
 
 cd "$WINEPREFIX/drive_c/Program Files (x86)/rFactor"
 
-clear
-wine "rF Config.exe" 2>/dev/null 1>/dev/null
+wine "rF Config.exe" 
 
 exit 0
 

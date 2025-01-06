@@ -24,12 +24,19 @@ Run
 
 from launcher.py or the command line to run Bridge analysis software.
 
-MON WORKAROUNDS: if using the default version of wine, 
-you'll need to run ./setWineDisplayResolution.sh and choose
-to emulate Windows XP, rather than the default, which is Windows 7,
-or WBridge5 File/Open and File/Save will not work.  Or you can run
-./wine_experimental.sh, which will fix File/Open and File/Save,
-and also give you online help.
+MON WORKAROUNDS: Since wBridge 5 and Q Plus Bridge lack suit fonts
+when run with the default Ubuntu 24.04 version of wine, it is
+recommended to run these games under lutris with the lutris
+configurations provided.  The runThisScriptFirst.sh script
+installs lutris; from the ese directory run 
+
+python3 lutris_restore.py
+
+to load the ese game profiles, then simply type 
+
+lutris
+
+to see a graphical menu of the games that need lutris.
 
 If you install the additional linux packages per the instructions 
 in ./runThisScriptFirst.sh, bcalc will automatically switch to a 
@@ -57,7 +64,20 @@ exceeding the traction budget on the rear wheels, experiment with
 pushing vs. loose, soft vs. stiff setups, etc. on the skidpad and
 complex test tracks (under 67 season).
 
-TUE WORKAROUNDS: GPL used to lose keyboard focus regularly with
+TUE WORKAROUNDS: Install GPL by running it from launcher.py
+or cd to TUE and type
+./gpl.sh
+
+When done with the installation, exit from the 2D GEM+ launcher.
+Then run lutris (see above) to run the 3D game for the first time.
+After the first run in lutris, you should be able to run
+without issue by running
+
+./gpl.sh
+
+directly.
+
+GPL used to lose keyboard focus regularly with
 earlier versions of wine, less so recently.  If this occurs,
 typing regular characters on the keyboard will have no effect.  To
 counter this, you need to get accustomed to grabbing the keyboard
@@ -169,13 +189,18 @@ and performance.  Learn to zoom in on the 2D campaign map view and
 turn on icons, e.g. troops and tanks, to study the evolving
 battlefield situation before you start each mission.
 
-THU WORKAROUNDS: For both Mig Alley and Battle of Britain, a dual
-monitor setup is recommended.  Use the winehq-staging version of
-wine. Set both monitors to their maximum resolutions, and set PC
-Config/3D resolution and Campaign Resolution to 1280x1024 in Battle of
-Britain.  In ./setWineDisplayResolution.sh graphics tab only the
+THU WORKAROUNDS: Run both Mig Alley and Battle of Britain using lutris,
+as neither of these games run well under the default ubuntu 24.04
+version of wine. (See above for information about how to load
+the lutris profiles for ese games.)  For Mig Alley, a dual
+monitor setup is recommended.  
+In ./setWineDisplayResolution.sh graphics tab only the
 "Allow The Window Manger To Control the Windows" should be selected.
 Following all these steps should prevent graphics problems.
+
+Also run the Century of Flight civilian flight simulator via lutris
+the first time you run it; subsequent runs should work using the
+default ubuntu 24.04 version of wine.
 
 If you don't follow all these steps, here are some of the problems
 you'll run in to: both sims place a black box over the 3D view window

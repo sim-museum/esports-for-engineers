@@ -22,7 +22,7 @@ if [ ! -f /usr/games/fgfs ]; then
 fi
 
 # Check if FlightGear add-on aircraft are installed
-addon_aircraft_dir="$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020"
+export addon_aircraft_dir="$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020"
 if [ ! -d "$addon_aircraft_dir" ]; then
     clear
     echo "It appears that the FlightGear add-on aircraft are not installed."
@@ -33,7 +33,7 @@ if [ ! -d "$addon_aircraft_dir" ]; then
 fi
 
 # Set variables for readability
-flight_script="$PWD/training_F86_startInAir.sh"
+export flight_script="$PWD/training_F86_startInAir.sh"
 
 # Set the aircraft to F-86F and set time to noon on June 1, 2020 at the user's location
 echo " "; echo "For landing help select View/Toggle Glide Slope Tunnel"; echo " ";

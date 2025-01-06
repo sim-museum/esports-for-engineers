@@ -12,6 +12,8 @@
 
 # Set Wine prefix directory
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
 
 # Check if Qplus Bridge 15 is installed
 if [ -d "$WINEPREFIX/drive_c/games/qbridge15" ]; then

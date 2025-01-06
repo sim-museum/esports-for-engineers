@@ -1,5 +1,5 @@
 WED Scoring 
-eSports for Engineers 22041LTS
+eSports for Engineers 24041LTS
 
 Save your Chess games as .pgn files.  Copy these .pgn files, along
 with screenshot .png files showing your games and analysis to the

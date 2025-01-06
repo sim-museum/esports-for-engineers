@@ -2,18 +2,18 @@
 
 # Set Wine prefix directory
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
+
 
 # Check if PokerStove.exe exists
-if [ -f "$WINEPREFIX/drive_c/Program Files (x86)/PokerStove/PokerStove.exe" ]; then
-    cd "$WINEPREFIX/drive_c/Program Files (x86)/PokerStove/"
+if [ -f "$WINEPREFIX/drive_c/Program Files/PokerStove/PokerStove.exe" ]; then
+    cd "$WINEPREFIX/drive_c/Program Files/PokerStove/"
     wine PokerStove.exe 2>/dev/null
     exit
 else
-    # Unzip pokerstove-0.1.zip
-    unzip -o "./INSTALL/pokerstove-0.1.zip" -d "./INSTALL/" > /dev/null
-
     # Change directory to PokerStove installation directory
-    cd "./INSTALL/pokerstove-0.1/win32/"
+    cd "./INSTALL/"
 
     # Print installation instructions
     clear;
@@ -26,9 +26,6 @@ else
 
     # Run PokerStoveSetup124.exe using Wine
     wine PokerStoveSetup124.exe 2>/dev/null 1>/dev/null
-
-    # clean up the INSTALL/pokerstove-0.1 directory
-    rm -rf $WINEPREFIX/../INSTALL/pokerstove-0.1
 
     # Print success message
     clear

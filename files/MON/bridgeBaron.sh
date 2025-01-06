@@ -5,11 +5,13 @@
 
 # Set the Wine prefix directory
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
 
 # Check if Bridge Baron 29 is installed
-if [ -d "$WINEPREFIX/drive_c/Program Files (x86)/Great Game Products/Bridge Baron 29" ]; then
+if [ -d "$WINEPREFIX/drive_c/Program Files/Great Game Products/Bridge Baron 29" ]; then
     # Run Bridge Baron 29 if installed
-    wine "$WINEPREFIX/drive_c/Program Files (x86)/Great Game Products/Bridge Baron 29/Baron.exe" 2>/dev/null 1>/dev/null
+    wine "$WINEPREFIX/drive_c/Program Files/Great Game Products/Bridge Baron 29/Baron.exe" 2>/dev/null 1>/dev/null
     clear
     # Display exit message
     cat "$WINEPREFIX/../DOC/REFERENCE/exitMessageBridgeBaron.txt"

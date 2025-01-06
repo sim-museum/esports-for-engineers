@@ -118,7 +118,7 @@ while True:
     if day_int == 7:  # Export scores and game output files
         current_time = datetime.now()
         time_string = current_time.strftime("%Y-%m-%d_%H-%M-%S")
-        dir_string = f"eSportsForEngineers-22041LTS_{round(score_today, 3)}_{time_string}"
+        dir_string = f"eSportsForEngineers-24041LTS_{round(score_today, 3)}_{time_string}"
         os.mkdir(dir_string)  # Create directory for export
         for time_str in score_times:  # Copy relevant files to export directory
             if time_str:
@@ -224,6 +224,6 @@ while True:
             cmd_string = f"{current_path}/{day_string}"
             launch_string = f"./{script_df[day_string][script_int - 1]}"
         os.chdir(cmd_string)
-        os.system(launch_string)
+        os.system(f"bash {launch_string}")
         sys.exit(0)
 

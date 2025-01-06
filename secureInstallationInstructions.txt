@@ -4,24 +4,23 @@
 
 # If security is a concern, follow these steps:
 
-1. Designate an old PC for use only with eSports for Engineers.  (A gaming PC is overkill for these old game - a 5 year old, min-range PC works fine. An nvidia graphics card is helpful.)  A complete install of all the games takes roughly 400 GB of disk space.
+1. Designate an old PC for use only with eSports for Engineers.  (A gaming PC is overkill for these old game - a 5 year old, min-range PC works fine. An nvidia graphics card is helpful.)  A complete install of all the games takes roughly 250 GB of disk space, so the partition should be larger than that, say 400 GB.
 
-2. Install Ubuntu 22.04 LTS on this PC.  (You could also create a new Ubuntu 22.04 LTS partition in a dual boot configuration, where you boot either Ubuntu or MS Windows, or Ubuntu or a different linux partition.) 
+2. Install Ubuntu 24.04 LTS on this PC.  (You could also create a new Ubuntu 24.04 LTS partition in a dual boot configuration, where you boot either Ubuntu or MS Windows, or Ubuntu or a different linux partition.) 
 
-3. follow the steps in introduction.txt (within the tar file and in the scripts directory on the github site), paying particular attention to the instructions about downloading and installing proprietary graphics drivers.  
+3. Copy the esports-for-engineers tar file onto your Ubuntu 24.04 partition; unpack it with tar xzf.
 
-4. execute "./runThisScriptFirst.sh" (this will print out a sudo command for you to copy/paste into a terminal window) for downloading packages from the internet, unless you point to an ubuntu cdrom in /etc/apt/sources.list):
+4. follow the steps in introduction.txt (within the tar file and in the scripts directory on the github site), paying particular attention to the instructions about downloading and installing proprietary graphics drivers.  
+
+5. execute "./runThisScriptFirst.sh" (this will print out a sudo command for you to copy/paste into a terminal window) for downloading packages from the internet, unless you point to an ubuntu cdrom in /etc/apt/sources.list):
 
 (also in the githib site scripts directory, and in the tar file) to install the needed packages
 
-5. download flightgear and the add-on aircraft for flightgear as described in introduction.txt. 
+6. Visit the esports for engineers forum for additional resources, using the link provided on the project github page
 
-6. run ./wine_experimental.sh
+7. Follow the instructions in installationTips.pdf.  Run launcher.py to configure and play the games.
 
-7. Copy esports-for-engineers.tar.gz onto your Ubuntu partition.  Unpack and run launcher.py to play
-the games.
-
-At this point you can disconnect from the internet permanently, then install the games[1].  
+At this point you can disconnect from the internet permanently
 
 
 

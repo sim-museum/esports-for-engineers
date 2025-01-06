@@ -6,7 +6,7 @@ export WINEPREFIX="$PWD/WP"
 # Check if the Sierra directory exists in the Wine prefix
 if [ -d "$WINEPREFIX/drive_c/Sierra" ]; then
   # Navigate to the GPL Setup Manager directory and run the executable
-  cd "$WINEPREFIX/drive_c/GPLSecrets/GPL Setup Manager" || exit 1
+  cd "$WINEPREFIX/drive_c/Program Files/GPLSecrets/GPL Setup Manager" || exit 1
   wine 'GPL Setup Manager.exe' 2>/dev/null 1>/dev/null
   exit 0
 else

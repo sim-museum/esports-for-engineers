@@ -17,9 +17,9 @@
 # 4. Start the FlightGear simulator.
 
 # Define variables for readability
-FGFS_EXEC="/usr/games/fgfs"
-FGFS_AIRCRAFT_DIR="$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020"
-INSTALL_SCRIPT="./installFlightgear.sh"
+export FGFS_EXEC="/usr/games/fgfs"
+export FGFS_AIRCRAFT_DIR="$HOME/.fgfs/Aircraft/org.flightgear.fgaddon.stable_2020"
+export INSTALL_SCRIPT="./installFlightgear.sh"
 
 # Check if FlightGear simulator is installed
 if [ ! -f "$FGFS_EXEC" ]; then

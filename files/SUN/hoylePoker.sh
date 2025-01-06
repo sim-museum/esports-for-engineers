@@ -11,7 +11,10 @@
 #!/bin/bash
 
 # Set Wine prefix
-WINEPREFIX="$PWD/WP"
+export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
+
 
 # Directory paths
 INSTALL_DIR="$WINEPREFIX/../INSTALL"

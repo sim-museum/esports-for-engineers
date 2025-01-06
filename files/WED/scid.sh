@@ -11,6 +11,9 @@ echo ""
 
 # Set up WINEPREFIX for Wine environment and navigate to the INSTALL directory.
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
+
 cd "$WINEPREFIX/../INSTALL"
 
 # Clear the terminal and attempt to run Scid.

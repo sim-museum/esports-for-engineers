@@ -13,10 +13,13 @@
 
 # Set the Wine prefix
 export WINEPREFIX=$PWD/WP
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
+
 
 # Define frequently used directory paths
-game_dir="$WINEPREFIX/drive_c/Program Files (x86)/Activision Value/WSOP 2008"
-install_dir="$WINEPREFIX/../INSTALL"
+export game_dir="$WINEPREFIX/drive_c/Program Files/Activision Value/WSOP 2008"
+export install_dir="$WINEPREFIX/../INSTALL"
 
 # Check if the game executable exists
 if [ -f "$game_dir/WSOPBFTB.exe" ]; then
@@ -59,7 +62,8 @@ if [ -f "$game_dir/WSOPBFTB.exe" ]; then
 fi
 
 # Move the game files if not found
-mv "$WINEPREFIX/../../tar/World-Series-of-Poker-2008-Battle-for-the-Bracelets_Win_EN.zip" "$install_dir" &>/dev/null
+mv "$WINEPREFIX/../../tar/World-Series-of-Poker-2008-Battle-for-the-Bracelets_Win_EN.zip" "$install_dir" 2>/dev/null 1>/dev/null
+
 
 # Check if the game files are not found
 if [ ! -f "$install_dir/World-Series-of-Poker-2008-Battle-for-the-Bracelets_Win_EN.zip" ]; then
@@ -102,7 +106,7 @@ echo "After installation is complete, run this script again."
 echo ""
 printf "Press return to continue ...\n"
 read -r replyString
-wine SETUP.exe &>/dev/null
+wine SETUP.exe 2>/dev/null 1>/dev/null
 cd "$WINEPREFIX/../.."
 
 

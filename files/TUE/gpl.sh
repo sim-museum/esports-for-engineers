@@ -11,6 +11,8 @@
 
 # Set WINEPREFIX to the current working directory with /WP appended
 export WINEPREFIX="$PWD/WP"
+export WINEARCH=win32
+wine winecfg -v winxp  2>/dev/null 1>/dev/null
 
 # Check if the GPL executable does not exist in the specified directory
 if [ ! -f "$WINEPREFIX/drive_c/Sierra/GPL/gpl.exe" ]; then
@@ -75,7 +77,7 @@ if [ ! -f "$WINEPREFIX/drive_c/Sierra/GPL/gpl.exe" ]; then
         wine "$WINEPREFIX/../INSTALL/gplrast_v2.5.exe" 2>/dev/null 1>/dev/null
 
         # Replace rd3d7v2.dll with roglv2.dll in app.ini
-        sed -i 's/rd3d7v2.dll/roglv2.dll/' "$WINEPREFIX/drive_c/Sierra/GPL/app.ini"
+#        sed -i 's/rd3d7v2.dll/roglv2.dll/' "$WINEPREFIX/drive_c/Sierra/GPL/App.ini"
 
         # Install GPL 1967 patch
         wine "$WINEPREFIX/../INSTALL/GPL_67_PATCH/1967_PATCH_v1.3_Setup.exe" 2>/dev/null 1>/dev/null
@@ -92,27 +94,31 @@ if [ ! -f "$WINEPREFIX/drive_c/Sierra/GPL/gpl.exe" ]; then
     
     # Copy player-related files to GPL directory
     cp -r "$WINEPREFIX/../INSTALL/"*__Driver "$WINEPREFIX/drive_c/Sierra/GPL/players"
-    cp -r "$WINEPREFIX/../INSTALL/app.ini" "$WINEPREFIX/drive_c/Sierra/GPL/"
+    cp "$WINEPREFIX/../INSTALL/app.ini" "$WINEPREFIX/drive_c/Sierra/GPL/"
     
     # Install GEMPackage
     wine INSTALL/GEMPackage_2.5.0.32.exe 2>/dev/null 1>/dev/null
+
+    cp "$WINEPREFIX/../INSTALL/GEM.ini" "$WINEPREFIX/drive_c/Program Files/GPLSecrets/GEM+/"
+
+    # also the GEM+ configuration directory under users/Public/Documents doesn't install correctly
+    # rm -rf "$WINEPREFIX/drive_c/users/Public/Documents/GEM+"
+    # cp -R "$WINEPREFIX/../INSTALL/GEM+" "$WINEPREFIX/drive_c/users/Public/Documents"
     
     # Backup GEM.ini, copy new GEM.ini, and modify iGOR.ini
     # must remove ini file so GEM initializes correctly
 
-    mv "$WINEPREFIX/drive_c/users/Public/Documents/GEM+/GEM.ini" "$WINEPREFIX/drive_c/users/Public/Documents/GEM+/GEM.ini.bak"
-    cp INSTALL/GEM.ini "$WINEPREFIX/drive_c/users/Public/Documents/GEM+"
-    sed -i 's/gplrank.info/igor.gplrank.de/' "$WINEPREFIX/drive_c/GPLSecrets/iGOR/iGOR.ini"
+    sed -i 's/gplrank.info/igor.gplrank.de/' "$WINEPREFIX/drive_c/Program Files/GPLSecrets/iGOR/iGOR.ini"
     
     # Remove existing GPL Setup Manager directory, version 1.16, then copy new one, version 2.7
-    rm -rf "$WINEPREFIX/drive_c/GPLSecrets/GPL Setup Manager"
-    cp -R "$WINEPREFIX/../INSTALL/GPL Setup Manager" "$WINEPREFIX/drive_c/GPLSecrets"
+    rm -rf "$WINEPREFIX/drive_c/Program Files/GPLSecrets/GPL Setup Manager"
+    cp -R "$WINEPREFIX/../INSTALL/GPL Setup Manager" "$WINEPREFIX/drive_c/Program Files/GPLSecrets"
     
     # Copy additional files for Pribluda and GEM+
     # installing pribluda needed if using GPL free demo, redundant if using GPL iso
     cp "$WINEPREFIX/../INSTALL/pribluda/"*.* "$WINEPREFIX/drive_c/Sierra/GPL"
     # make options, such as pribluda telemetry and head movement, available in GEM+
-    cp "$WINEPREFIX/../INSTALL/GEM_options/"*.* "$WINEPREFIX/drive_c/GPLSecrets/GEM+/Options"
+    cp "$WINEPREFIX/../INSTALL/GEM_options/"*.* "$WINEPREFIX/drive_c/Program Files/GPLSecrets/GEM+/Options"
     
     # Step 1 of 8: Install Challenge Rank tracks
     echo " "; echo "step 1 of 8"; echo " "
@@ -299,7 +305,7 @@ if [ ! -f "$WINEPREFIX/drive_c/Sierra/GPL/gpl.exe" ]; then
     
     rsync -a "$common_path/TrackINI_fix/" "$tracks_path/nassau/" 2>/dev/null 1>/dev/null
     rsync -a "$common_path/StJovite_mini_texture_addon/" "$tracks_path/stjovite" 2>/dev/null 1>/dev/null
-    rsync -a "$common_path/CanAm gfx x Stardust/stardust/" "$    tracks_path/stardust" 2>/dev/null 1>/dev/null
+    rsync -a "$common_path/CanAm gfx x Stardust/stardust/" "$tracks_path/stardust" 2>/dev/null 1>/dev/null
      
         # Copy additional track pictures
         cp "$WINEPREFIX/../INSTALL/addGEMpics/stjovite.jpg" "$WINEPREFIX/drive_c/Sierra/GPL/tracks/stjovite"
@@ -333,11 +339,13 @@ cd "$WINEPREFIX/.."
 
 # Run GEM+
 echo ""; echo "Running GEM+ ..."; echo ""
-wine "$WINEPREFIX/drive_c/GPLSecrets/GEM+/GEMP2.exe" 2>/dev/null 1>/dev/null
+echo "for Ubuntu 24.04 set the rasterizer on the inital GEM+ screen to OpenGL (not OpenGL v2)" 
+echo "" 
+wine "$WINEPREFIX/drive_c/Program Files/GPLSecrets/GEM+/GEMP2.exe" 2>/dev/null 1>/dev/null
 
 # Print optional scripts information
 clear
-printf "Grand Prix Legends Optional Scripts:\n\nReal-time telemetry for 55, 66, 67 and 67x mods:\n"$WINEPREFIX"/../twoMonitorTelemetry.sh\n\nReduce number of laps in a race:\n"$WINEPREFIX"/../setRaceLaps.py\n\nReduce speed of AI cars:\n"$WINEPREFIX"/../slowDownGplAiCars.py\n\n"
+printf "Grand Prix Legends Optional Scripts:\n\nReal-time telemetry for 55, 66, 67 and 67x mods:\n"$WINEPREFIX"/../twoMonitorTelemetry.sh\n\nReduce number of laps in a race:\n"$WINEPREFIX"/../setRaceLaps.py\n\nReduce speed of AI cars:\n"$WINEPREFIX"/../slowDownGplAiCars.py\n\nUbuntu 24.04 configuration recommendations:\nOn the initial GEM+ screen, set rasterizer to Direct 3D\nFor smoother animation, select 60 fps - see\n$WINEPREFIX/../match_AI_to_frame_rate\n\n"
 
 # Exit
 exit 0

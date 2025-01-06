@@ -1,5 +1,5 @@
 ﻿SAT Scoring
-eSports for Engineers 22041LTS 
+eSports for Engineers 24041LTS 
 
 As with the other games, be sure to record your flights and copy the
 resulting .vhs files to the SAT/afterGamereport directory.  If using
@@ -164,14 +164,49 @@ score =1 for winning any of the campaigns listed above (playing either side),
 
 ---------------------------------------------------------------
 
-Non-free Alternatives
-
-More advanced and complex versions of the Falcon 4 code are available, and
-can be run on Ubuntu 20.04 LTS.  
-
 It's up to you which of the version to use for the OKRs, free falcon,
 which is included, Falcon Allied Force, for which an install script
 is provided, or one of the more recent versions.  Each version
 has unique strengths and weaknesses in the form of documentation, ease of
 installation or use, and suitability to a particular OKR.
+
+The following OKRs involve the non-violent SAT alternative game, 
+Canadian Football League (CFL)
+
+---------------------------------------------------------------
+OKR #1, 3 
+Add .1 points to your score for reading all the documentation in SAT/DOC/CFL
+
+---------------------------------------------------------------
+OKR #1, 4 
+Add .025 points for each of the following tasks (daily score cap at 0.4)
+  - Learning the 'Singleback Trips Bunch Curls Attack' - Understand the setup, routes, and execution in game scenarios.
+  - Setting up and running the 'I-Form Normal FB FK HB Toss' - Practice the fake handoff and outside toss execution.
+  - Executing the 'Strong I Normal FB Dive' - Focus on the timing, blocking, and short-yardage success rate.
+  - Understanding and running the 'Singleback Tight Doubles HB Stretch' - Learn to exploit the edges of the field effectively.
+  - Getting familiar with 'Split Backs Normal HB Blast' - Work on quick hits and short gains efficiency.
+  - Mastering the 'Singleback 4WR Spread Gun HB Screen' - Not just the screen, but also the passing variations.
+  - Running 'Shotgun Normal All Streaks' - Perfect the timing for deep passing plays.
+  - Implementing the 'Shotgun Normal Quick Slant' - Focus on quick, short passes for rhythm and control.
+
+---------------------------------------------------------------
+OKR #2, 3 
+- Add .05 points for each of the following tasks (daily score cap at 0.7):
+  - Understanding and executing 'Nickel 3-3-5 Cover 3' - Learn to read and adjust your defense based on offensive formations.
+  - Mastering 'Cover Man Coverage' as described by Coach Cam Art - Practice disguising your defense and using man coverage effectively.
+  - Adapting 'Dime Normal' with Smart Zones or Receiver Spotlight - Understand how to use this formation to counter spread offenses.
+  - Executing a 'Play Blitz' - Learn when and how to blitz effectively based on down and distance.
+  - Setting up 'Quarter Cover 2' - Learn to balance between defending the pass and stopping the run.
+
+#### OKR #3, 2 
+- Score is based on your performance in simulated games. 
+  - 0.1 points - Win a simulated game using at least 3 offensive plays from the playbook.
+  - 0.2 points - Adjust your strategy mid-game based on defensive reactions to your playbook.
+  - 0.3 points - Implement and adapt defensive plays effectively in different game scenarios.
+  - 0.4 points - Achieve a balanced offense with a mix of runs and passes from the playbook.
+  - 0.5 points - Win a game with a strategy entirely based on the provided playbook.
+
+---------------------------------------------------------------
+#### OKR #3, 2 
+- 1 point for winning a season with predominantly using the playbook strategies.
 
